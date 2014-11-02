@@ -6,6 +6,7 @@
 <!--[if gt IE 8]><!--> <html lang="en-US"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Туристически маршрути</title>
 	<link rel="shortcut icon" href="css/images/favicon.ico">
 	<link rel="stylesheet"href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,700,800,400,600&amp;subset=latin,cyrillic-ext" type="text/css">
@@ -26,11 +27,13 @@
 </head>
 <body>
 <div class="container">
-	<header class="header">
+	<header class="header" id="header">
 		<div class="shell">
 			<div class="logo">
 				<a href="01-home.html">Brand</a>
 			</div>
+
+			<a class="nav-btn" id="nav-btn" href="#"><span></span><span></span><span></span></a>
 
 			<nav class="utilities">
 				<ul class="clearfix">
@@ -54,9 +57,7 @@
 			</nav>
 			
 			<div class="navbar">
-				<a class="nav-btn" href="#"><span></span><span></span><span></span></a>
-
-				<nav class="nav">
+				<nav class="nav" id="nav">
 					<ul class="clearfix">
 						<li class="current-menu-parent has-dropdown">
 							<a href="02-routes.html">Маршрути</a>

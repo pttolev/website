@@ -4,6 +4,7 @@
 		$backgroundImage,
 		$buttonProfile,
 		$mapCanvas,
+		$header,
 		$map,
 		$markers,
 		$gpsFile,
@@ -12,6 +13,7 @@
 		$graphNumber,
 		$formField,
 		$buttonCoordinates,
+		winWidth,
 		isMobile,
 		myLat,
 		myLng,
@@ -24,6 +26,7 @@
 		$buttonProfile     = $('.button-profile');
 		$details           = $('#details');
 		$mapCanvas         = $('#map-canvas');
+		$header            = $('#header');
 		$map               = $('#map');
 		$markers           = $('#markers');
 		$gpsFile           = $('#gps-file');
@@ -32,6 +35,8 @@
 		$graphMeter        = $('.graph-meter');
 		$formField         = $('.gfield, .form-row');
 		$buttonCoordinates = $('#button-coordinates');
+
+		winWidth = $win.width();
 
 		//blink fields
 		if ( $formField.length ) {
@@ -71,6 +76,24 @@
 		});
 
 		//header buttons
+		$('#nav-btn').on('click', function(e){
+			$header.toggleClass('open');
+
+			e.preventDefault();
+		});
+
+		$('#nav').on('click', 'a', function(e){
+			var $this = $(this);
+
+			if ( $this.siblings('ul').length ) {
+				$this.parent().toggleClass('open').siblings().removeClass('open');
+			}
+
+			if ( winWidth <= 1024 ) {
+				e.preventDefault();
+			}
+		});
+
 		$buttonProfile.children('a').on('click', function(e){
 			$(this).parent().toggleClass('open').siblings().removeClass('open');
 
@@ -171,7 +194,7 @@
 		});
 
 		//other functions
-		if ( $('.map-canvas').length ) {
+		if ( $('#map-canvas').length ) {
 			initialize();
 		}
 
@@ -182,13 +205,18 @@
 		backgroundResize();
 	});
 
-	//window load functions
-	$win.on('load', function(){
-
+	//window scroll functions
+	$win.on('scroll', function(){
+		if ( winWidth <= 1024 ) {
+			if ( $header.hasClass('open') ) {
+				$header.removeClass('open');
+			}
+		}
 	});
 
 	//window resize functions
 	$win.on('resize', function(){
+		winWidth = $win.width();
 		backgroundResize();
 		mapSize();
 	});
