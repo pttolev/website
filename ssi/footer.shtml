@@ -1,0 +1,31 @@
+	<footer class="footer">
+		<div class="shell">
+			<div class="footer-nav">
+				<ul>
+					<li><a href="05-about.html">За Нас</a></li>
+					<li><a href="terms.html">Условия</a></li>
+					<li><a href="08-contact.html">Контакти</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-socials">
+				<ul class="clearfix">
+					<li><a href="#"><small class="icon icon-facebook-squared"></small></a></li>
+					<li><a href="#"><small class="icon icon-twitter-squared"></small></a></li>
+					<li><a href="#"><small class="icon icon-gplus-squared"></small></a></li>
+				</ul>
+			</div>
+
+			<div class="legal">
+				<p><span>&copy; Copyright Website 2015</span><span>Developed by Panayot Tolev</span></p>
+				<a class="email" href="mailto:email@gmail.com"><small class="icon icon-email"></small>email@gmail.com</a>
+			</div>
+		</div><!-- /shell -->
+	</footer><!-- /footer -->
+</div><!-- /container -->
+
+<div class="overlay">
+	<p>Версията на Вашият браузър е прекалено стара, <br> моля актуализирайте го или изтеглете друг браузър <a href="http://www.google.bg/intl/bg/chrome/">тук</a></p>
+</div>
+</body>
+</html>

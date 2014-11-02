@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forms version="1.8.5">
+	<form labelPlacement="top_label" useCurrentUserAsAuthor="1">
+		<title><![CDATA[touristic - book]]></title>
+		<descriptionPlacement><![CDATA[below]]></descriptionPlacement>
+		<button type="text">
+			<text><![CDATA[Резервирай]]></text>
+		</button>
+		<fields>
+			<field id="1" type="name" size="medium" nameFormat="simple">
+				<label><![CDATA[Име]]></label>
+			</field>
+			<field id="2" type="email" size="medium">
+				<label><![CDATA[Email]]></label>
+			</field>
+			<field id="3" type="phone" size="medium" phoneFormat="international">
+				<label><![CDATA[Телефон]]></label>
+			</field>
+			<field id="4" type="date" size="medium" dateType="datepicker" calendarIconType="none">
+				<label><![CDATA[Дата на тръгване]]></label>
+			</field>
+			<field id="5" type="text" size="medium">
+				<label><![CDATA[Брой участници]]></label>
+			</field>
+			<field id="6" type="text" size="medium">
+				<label><![CDATA[Човек ли си? 3 + 1 =]]></label>
+			</field>
+		</fields>
+		<notifications>
+			<notification id="543d6eac680e3">
+				<to><![CDATA[{admin_email}]]></to>
+				<name><![CDATA[Admin Notification]]></name>
+				<event><![CDATA[form_submission]]></event>
+				<toType><![CDATA[email]]></toType>
+				<subject><![CDATA[New submission from {form_title}]]></subject>
+				<message><![CDATA[{all_fields}]]></message>
+			</notification>
+		</notifications>
+		<confirmations>
+			<confirmation id="543d6eac6e2f5" isDefault="1" type="message">
+				<name><![CDATA[Default Confirmation]]></name>
+				<message><![CDATA[Thanks for contacting us! We will get in touch with you shortly.]]></message>
+			</confirmation>
+		</confirmations>
+	</form>
+</forms>

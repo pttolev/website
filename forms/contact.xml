@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forms version="1.8.5">
+	<form labelPlacement="top_label" useCurrentUserAsAuthor="1">
+		<title><![CDATA[touristic - contact]]></title>
+		<descriptionPlacement><![CDATA[below]]></descriptionPlacement>
+		<button type="text">
+			<text><![CDATA[Submit]]></text>
+		</button>
+		<fields>
+			<field id="1" size="medium" type="name" nameFormat="simple">
+				<label><![CDATA[Име]]></label>
+			</field>
+			<field id="2" size="medium" type="name" nameFormat="simple">
+				<label><![CDATA[Фамилия]]></label>
+			</field>
+			<field id="3" size="medium" type="email">
+				<label><![CDATA[Email]]></label>
+			</field>
+			<field id="4" size="medium" type="phone" phoneFormat="international">
+				<label><![CDATA[Телефон]]></label>
+			</field>
+			<field id="5" size="medium" type="textarea">
+				<label><![CDATA[Вашето съобщение]]></label>
+			</field>
+			<field id="6" size="small" type="text">
+				<label><![CDATA[Човек ли си? 3 + 1 =]]></label>
+			</field>
+		</fields>
+		<confirmations>
+			<confirmation id="54359b49c4b5e" isDefault="1" type="message">
+				<name><![CDATA[Default Confirmation]]></name>
+				<message><![CDATA[Thanks for contacting us! We will get in touch with you shortly.]]></message>
+			</confirmation>
+		</confirmations>
+		<notifications>
+			<notification id="54359b49be97f">
+				<to><![CDATA[{admin_email}]]></to>
+				<name><![CDATA[Admin Notification]]></name>
+				<event><![CDATA[form_submission]]></event>
+				<toType><![CDATA[email]]></toType>
+				<subject><![CDATA[New submission from {form_title}]]></subject>
+				<message><![CDATA[{all_fields}]]></message>
+			</notification>
+		</notifications>
+	</form>
+</forms>

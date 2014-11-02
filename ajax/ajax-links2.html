@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en-US" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en-US" class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-US" class="lt-ie9"> <![endif]-->
+<!--[if IE 9]>        <html lang="en-US" class="lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Туристически маршрути</title>
+	<link rel="shortcut icon" href="css/images/favicon.ico">
+	<link rel="stylesheet"href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,700,800,400,600&amp;subset=latin,cyrillic-ext" type="text/css">
+	<link rel="stylesheet" href="css/fontello.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNHMrXcpS7bcg1Q7kFkK9wRrCTDM69uXo&amp;sensor=false"></script>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery.fs.selecter.min.js"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="js/jquery.raty.js"></script>
+	<script src="js/functions.js"></script>
+
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+<div class="container">
+	<header class="header">
+		<div class="shell">
+			<div class="logo">
+				<a href="01-home.html">Brand</a>
+			</div>
+
+			<nav class="utilities">
+				<ul class="clearfix">
+					<li><a href="forecast.html"><small class="icon icon-sun-1"></small>Прогноза за времето</a></li>
+					<li class="button-profile" id="button-profile">
+						<a href="#">Панайот <img src="css/images/avatar.jpg" alt=""></a>
+
+						<div class="button-profile-dropdown">
+							<ul>
+								<li><a href="profile-loggedin.html">Лични данни</a></li>
+								<li><a href="achievements.html">Постижения</a></li>
+								<li><a href="14-visited.html">Посетени</a></li>
+								<li><a href="bookmarks.html">Отметки</a></li>
+								<li><a href="plans.html">Планове</a></li>
+								<li><a href="organized.html">Организирани</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+			
+			<div class="navbar">
+				<a class="nav-btn" href="#"><span></span><span></span><span></span></a>
+
+				<nav class="nav">
+					<ul class="clearfix">
+						<li class="current-menu-parent has-dropdown">
+							<a href="02-routes.html">Маршрути</a>
+				
+							<ul class="sub-menu">
+								<li><a href="02-walking-routes.html">Пешеходни маршрути</a></li>
+								<li class="current-menu-item"><a href="02-bike-routes.html">Вело маршрути</a></li>
+								<li><a href="02-offroad-02-routes.html">Офроуд маршрути</a></li>
+							</ul>
+						</li> 
+						<li><a href="02-sightseeings.html">Забележителности</a></li>
+						<li class="has-dropdown">
+							<a href="02-nights.html">Нощувки</a>
+
+							<ul>
+								<li><a href="02-huts.html">Хижи</a></li>
+								<li><a href="02-shelters.html">Заслони</a></li>
+								<li><a href="02-monasteries.html">Манастири</a></li>
+								<li><a href="02-hotels.html">Хотели</a></li>
+							</ul>
+						</li>
+						<li><a href="events.html">Събития</a></li>
+						<li class="has-dropdown">
+							<a href="stuff.html">Разни</a>
+
+							<ul>
+								<li><a href="02-restaurants.html">Места за хапване</a></li>
+							</ul>
+						</li>
+						<li><a href="organize.html">Организирай преход</a></li>
+						<li><a href="02-useful-information.html">Полезна информация</a></li>
+					</ul>
+				</nav><!-- /nav -->
+
+				<nav class="language">
+					<a class="language-btn" id="language-btn" href="#"><small class="flag flag-bulgaria"></small></a>
+
+					<ul>
+						<li><a href="#"><small class="flag flag-bulgaria"></small>Bulgarian</a></li>
+						<li><a href="#"><small class="flag flag-britain"></small>English</a></li>
+					</ul>
+				</nav><!-- /language -->
+			</div><!-- /navbar -->
+		</div><!-- /shell -->
+	</header><!-- /header -->
+
+	<section class="slider slider-small background">
+		<ul class="slides">
+			<li class="slide">
+				<img class="background-image" src="css/images/slide1.jpg" alt="" width="1700" height="620">
+
+				<div class="slide-text">
+					<div class="shell">
+						<div class="slide-text-inner">
+							<h1>Профил</h1>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</section><!-- /slider -->
+
+	<section class="main">
+		<div class="shell clearfix">
+			<nav class="breadcrumbs">
+				<ul>
+					<li><a href="01-home.html">Начало</a></li>
+					<li><a href="12-profile.html">Профил</a></li>
+					<li>Посетени</li>
+				</ul>
+			</nav><!-- /breadcrumbs -->
+
+			<section class="content left">
+				<section class="links">
+					<header class="links-head">
+						<h3><a href="09-gallery.html">Посетени Забележителности</a></h3>
+					</header>
+					
+					<section class="links-body">
+						<a class="link" href="10-gallery-images.html">
+							<span class="link-image"><span><img src="css/images/small1.jpg" alt=""></span></span>
+							<span class="link-text">
+								<strong class="link-title">Заглавие на галерията</strong>
+								<span class="link-description">Описание на галерията</span>
+							</span>
+						</a>
+					</section><!-- /links-body -->
+
+					<p class="end-message">Няма повече резултати</p>
+				</section><!-- /links -->
+			</section><!-- /content -->
+
+			<aside class="sidebar right">
+				<ul class="widgets">
+					<li class="widget widget_donate">
+						<a class="donate" href="paypalhttps://www.paypal.com/">Направи дарение</a>
+					</li><!-- /widget -->
+
+					<li class="widget widget_ad">
+						<a href="http://hobyto.com/" target="_blank"><img src="css/images/ad.jpg" alt=""></a>
+					</li><!-- /widget -->
+				</ul><!-- /widgets -->
+			</aside><!-- /sidebar -->
+		</div><!-- /shell -->
+	</section><!-- /main -->
+
+	<footer class="footer">
+		<div class="shell">
+			<div class="footer-nav">
+				<ul>
+					<li><a href="05-about.html">За Нас</a></li>
+					<li><a href="terms.html">Условия</a></li>
+					<li><a href="08-contact.html">Контакти</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-socials">
+				<ul class="clearfix">
+					<li><a href="#"><small class="icon icon-facebook-squared"></small></a></li>
+					<li><a href="#"><small class="icon icon-twitter-squared"></small></a></li>
+					<li><a href="#"><small class="icon icon-gplus-squared"></small></a></li>
+				</ul>
+			</div>
+
+			<div class="legal">
+				<p><span>&copy; Copyright Website 2015</span><span>Developed by Panayot Tolev</span></p>
+				<a class="email" href="mailto:email@gmail.com"><small class="icon icon-email"></small>email@gmail.com</a>
+			</div>
+		</div><!-- /shell -->
+	</footer><!-- /footer -->
+</div><!-- /container -->
+
+<div class="overlay">
+	<p>Версията на Вашият браузър е прекалено стара, <br> моля актуализирайте го или изтеглете друг браузър</p>
+</div>
+</body>
+</html>

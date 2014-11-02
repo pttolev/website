@@ -1,0 +1,487 @@
+<!--#include virtual="ssi/header.shtml" -->
+	<section class="slider slider-small background">
+		<ul class="slides">
+			<li class="slide">
+				<img class="background-image" src="css/images/slide1.jpg" alt="" width="1700" height="620">
+			</li>
+		</ul>
+	</section><!-- /slider -->
+
+	<section class="main">
+		<div class="shell clearfix">
+			<nav class="breadcrumbs">
+				<ul>
+					<li><a href="01-home.html">Начало</a></li>
+					<li><a href="02-routes.html">Маршрути</a></li>
+					<li>с. Петрово - вр. Гоцев връх</li>
+				</ul>
+			</nav><!-- /breadcrumbs -->
+			
+			<section class="adventure">
+				<header class="title">
+					<h2>с. Петрово - вр. Гоцев връх</h2>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, corrupti dolor. Ut corrupti, similique omnis.</p>
+				</header><!-- /title -->
+
+				<div class="forecast clearfix">
+					<p><strong>Времето в този район следващите 10 дни:</strong></p>
+					<ul>
+						<li><a href="forecast.html"><span>п</span><strong>21.07</strong><small title="Слънчево" class="icon icon-sun-1"></small></a></li>
+						<li><a href="forecast.html"><span>в</span><strong>21.07</strong><small title="Облачно" class="icon icon-cloud-2"></small></a></li>
+						<li><a href="forecast.html"><span>с</span><strong>21.07</strong><small title="Променлива облачност" class="icon icon-cloud-sun"></small></a></li>
+						<li><a href="forecast.html"><span>ч</span><strong>21.07</strong><small title="Възможност за Буря" class="icon icon-flash-2"></small></a></li>
+						<li><a href="forecast.html"><span>п</span><strong>21.07</strong><small title="Дъждовно" class="icon icon-rain-1"></small></a></li>
+						<li><a href="forecast.html"><span>с</span><strong>21.07</strong><small title="Снеговалеж" class="icon icon-snow"></small></a></li>
+						<li><a href="forecast.html"><span>н</span><strong>21.07</strong><small title="Снеговалеж" class="icon icon-snow"></small></a></li>
+						<li><a href="forecast.html"><span>п</span><strong>21.07</strong><small title="Снеговалеж" class="icon icon-snow"></small></a></li>
+						<li><a href="forecast.html"><span>в</span><strong>21.07</strong><small title="Дъждовно" class="icon icon-rain-1"></small></a></li>
+						<li><a href="forecast.html"><span>с</span><strong>21.07</strong><small title="Дъждовно" class="icon icon-rain-1"></small></a></li>
+					</ul>
+				</div>
+				
+				<div class="details" id="details">
+					<div class="map" id="map">
+						<div class="map-canvas" id="map-canvas">
+						</div><!-- /map-canvas -->
+
+						<a id="gps-file" href="logs/alibotush/alibotush.gpx"></a>
+					</div><!-- /map -->
+
+					<div class="list-table">
+						<ul>
+							<li><strong>Категория:</strong> <span>Екопътека</span></li>
+							<li><strong>Сезон:</strong> <span>Зимен</span></li>
+							<li><strong>Област:</strong> <span><a href="06-blog-post.html">Благоевград</a></span></li>
+							<li><strong>Планина:</strong> <span><a href="06-blog-post.html">Славянка</a></span></li>
+							<li><strong>Начална точка:</strong> <span>с. Петрово <small>( 41.4375720, 23.5060176 )</small></span></li>
+							<li><strong>Крайна точка:</strong> <span>вр. Гоцев връх <small>( 41.3769950, 23.6205070 )</small></span></li>
+							<li><strong>Денивелация:</strong> <span>800м <small>1100м - 1900м</small></span></li>
+							<li><strong>Дължина:</strong> <span>28-44км</span></li>
+							<li><strong>Времетраене:</strong> <span>3 дни</span></li>
+							<li><strong>Информация:</strong> <span>13-11-2011</span></li>
+							<li><strong>Източник:</strong> <span><a href="http://bgmountains.org/" target="_blank">BG Mountains</a></span></li>
+							<li><strong>Маркировка:</strong> <span><em class="rating" data-readonly="true" data-score="4" data-star-off="star-on.png" data-star-off="star-off.png" data-hints='["Няма", "Лоша", "Средна", "Добра", "Отлична"]'></em></span></li>
+							<li><strong>Трудност:</strong> <span><em class="rating" data-readonly="true" data-score="4" data-star-off="star-on.png" data-star-off="star-off.png" data-hints='["Елементарно", "Лесно", "Средно", "Трудно", "Про"]'></em></span></li>
+						</ul>
+					</div>
+				</div><!-- /details -->
+				
+				<div class="graph-container">
+					<div class="graph-numbers" id="graph-numbers">
+						<span><strong>0</strong>м</span>
+						<span><strong>0</strong>м</span>
+						<span><strong>0</strong>м</span>
+						<span><strong>0</strong>м</span>
+						<span><strong>0</strong>м</span>
+					</div><!-- /graph-numbers -->
+
+					<div class="graph" id="graph" data-lines="200">
+						<div class="graph-background">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div><!-- /graph-background -->
+
+						<div class="graph-foreground">
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+							<span class="graph-line"><span class="graph-meter" style="height: 0;"></span></span>
+						</div><!-- /graph-foreground -->
+					</div><!-- /graph -->
+				</div><!-- /graph-container -->
+
+				<div class="cta">
+					<a class="button" id="button-download" href="logs/alibotush/alibotush.gpx"><small class="icon icon-download"></small> Изтегли GPS Лог</a>
+					<a class="button" id="button-print" href="#"><small class="icon icon-print"></small> Принтирай</a>
+					<a class="button" id="button-navigate" href="http://maps.google.com/maps?saddr=41.4375720,23.5060176&amp;daddr=43.204665399999996,27.9105425" target="_blank" data-alert="Моля, имайте предвид, че ако вашето устройство не разполага с GPS или той НЕ Е ВКЛЮЧЕН, координатите, които получите може да имат големи отклонения с реалните!"><small class="icon icon-direction"></small> Навигирай</a>
+					<a class="button" href="#"><small class="icon icon-heart"></small> В Любими</a>
+					<a class="button" href="#"><small class="icon icon-ok"></small> Посетено</a>
+				</div><!-- /cta -->
+
+				<div class="cta">
+					<a class="button" href="02-hotels.html"><small class="icon icon-home"></small> Нощувки</a>
+					<a class="button" href="02-restaurants.html"><small class="icon icon-food"></small> Заведения</a>
+					<a class="button" href="11-places.html"><small class="icon icon-flag"></small> Места</a>
+					<a class="button" href="10-gallery-videos.html"><small class="icon icon-video"></small> Видео</a>
+					<a class="button" href="10-gallery-images.html"><small class="icon icon-picture"></small> Галерия</a>
+				</div><!-- /cta -->
+
+				<section class="post">	
+					<article class="entry">
+						<h3>Подробна информация за маршрута</h3>
+
+						<p>Това е зимен преход из граничната планина Алиботуш. Пътят започва от село Петрово, а след 6 километра вървене и денивелация от около 300 метра следва първата спирка х.Извор. Оттам се следва пътя към село Голешево до четвъртия километър. След това се отбива вляво по черен път - посока изток и се следва синята маркировка до местността Ливада, където може да се подслоните. Оттук има две разклонения към Гоцев връх. Едното е към вр. Цари връх, на изток, а оттам към Гоцев връх, но този маршрут може да бъде по-труден при зимни условия. Другият - към вр. Шабран, на юг, който е в съседство с Гоцев връх. Алтернативен маршрут на връщане е по гръцката граница, който след около 4-5 км се отклонява на север към х. Извор, а оттам и пътят към Петрово.</p>
+					</article><!-- /entry -->
+				</section><!-- /post -->
+
+				<div class="points">
+					<h3>Бележки</h3>
+
+					<ul class="clearfix">
+						<li>
+							<small class="icon icon-ok"></small>
+							<h6>Бележка 1</h6>
+							<p>Има опасност от мечки</p>
+						</li>
+						<li>
+							<small class="icon icon-ok"></small>
+							<h6>Бележка 2</h6>
+							<p>Има малко вода по пътя</p>
+						</li>
+						<li>
+							<small class="icon icon-ok"></small>
+							<h6>Бележка 3</h6>
+							<p>Има заслони навсякъде</p>
+						</li>
+						<li>
+							<small class="icon icon-ok"></small>
+							<h6>Бележка 4</h6>
+							<p>Няма сянка в продължение на часове</p>
+						</li>
+					</ul>
+				</div><!-- /points -->
+
+				<div class="list">
+					<h3>Организирана програма</h3>
+
+					<div class="list-item">
+						<div class="list-item-text">
+							<h6><small class="icon icon-address"></small>Ден първи <span>с. Петрово</span></h6>
+							<p>Това е зимен преход из граничната планина Алиботуш. Пътят започва от село Петрово, а след 6 километра вървене и денивелация от около 300 метра следва първата спирка х.Извор.</p>
+						</div>
+					</div><!-- /list-item -->
+
+					<div class="list-item">
+						<div class="list-item-text">
+							<h6><small class="icon icon-address"></small>Ден втори <span>х. Извор</span></h6>
+							<p>Оттам се следва пътя към село Голешево до четвъртия километър. След това се отбива вляво по черен път - посока изток и се следва синята маркировка до местността Ливада, където може да се подслоните.</p>
+						</div>
+					</div><!-- /list-item -->
+
+					<div class="list-item">
+						<div class="list-item-text">
+							<h6><small class="icon icon-address"></small>Ден трети <span>м. Ливада</span></h6>
+							<p>Оттук има две разклонения към Гоцев връх. Едното е към вр. Цари връх, на изток, а оттам към Гоцев връх, но този маршрут може да бъде по-труден при зимни условия. Другият - към вр. Шабран, на юг, който е в съседство с Гоцев връх.</p>
+						</div>
+					</div><!-- /list-item -->
+
+					<div class="list-item">
+						<div class="list-item-text">
+							<h6><small class="icon icon-address"></small>Ден четвърти <span>вр. Гоцев Връх</span></h6>
+							<p>Оттук има две разклонения към Гоцев връх. Едното е към вр. Цари връх, на изток, а оттам към Гоцев връх, но този маршрут може да бъде по-труден при зимни условия. Другият - към вр. Шабран, на юг, който е в съседство с Гоцев връх.</p>
+						</div>
+					</div><!-- /list-item -->
+				</div><!-- /list -->
+
+				<section class="articles">
+					<header class="articles-head">
+						<h3><a href="11-places.html">Други места наоколо</a></h3>
+					</header>
+					
+					<section class="articles-container clearfix">
+						<a class="article" href="04-sightseeing-single.html">
+							<span class="article-image"><img src="css/images/thumb4.jpg" alt=""></span>
+							<span class="article-title">Заглавие на статията</span>
+						</a>
+						<a class="article" href="03-trekking-area.html">
+							<span class="article-image"><img src="css/images/thumb5.jpg" alt=""></span>
+							<span class="article-title">Заглавие на статията</span>
+						</a>
+						<a class="article" href="04-sightseeing-single.html">
+							<span class="article-image"><img src="css/images/thumb6.jpg" alt=""></span>
+							<span class="article-title">Заглавие на статията</span>
+						</a>
+						<a class="article" href="03-trekking-area.html">
+							<span class="article-image"><img src="css/images/thumb1.jpg" alt=""></span>
+							<span class="article-title">Заглавие на статията</span>
+						</a>
+					</section><!-- /articles-container -->
+				</section><!-- /articles -->
+
+				<section class="links-group">
+					<section class="links left">
+						<header class="links-head">
+							<h3><a href="02-hotels.html">Нощувки наблизо</a></h3>
+						</header>
+						
+						<section class="links-body">
+							<a class="link" href="04-hotel-single.html">
+								<span class="link-image"><span><img src="css/images/small1.jpg" alt=""></span></span>
+								<span class="link-text">
+									<strong class="link-title">Име на хотела</strong>
+									<span class="link-description">Описание на хотела</span>
+								</span>
+							</a>
+							<a class="link" href="04-hut-single.html">
+								<span class="link-image"><span><img src="css/images/small2.jpg" alt=""></span></span>
+								<span class="link-text">
+									<strong class="link-title">Име на хотела</strong>
+									<span class="link-description">Описание на хотела</span>
+								</span>
+							</a>
+							<a class="link" href="04-hotel-single.html">
+								<span class="link-image"><span><img src="css/images/small3.jpg" alt=""></span></span>
+								<span class="link-text">
+									<strong class="link-title">Име на хотела</strong>
+									<span class="link-description">Описание на хотела</span>
+								</span>
+							</a>
+							<a class="link" href="04-hut-single.html">
+								<span class="link-image"><span><img src="css/images/small4.jpg" alt=""></span></span>
+								<span class="link-text">
+									<strong class="link-title">Име на хотела</strong>
+									<span class="link-description">Описание на хотела</span>
+								</span>
+							</a>
+						</section><!-- /links-body -->
+						
+						<footer class="links-footer">
+							<a class="more" href="02-hotels.html">Виж всички в радиус според отдалеченост</a>
+						</footer>
+					</section><!-- /links -->
+
+					<section class="links right">
+						<header class="links-head">
+							<h3><a href="02-restaurants.html">Хапване наблизо</a></h3>
+						</header>
+						
+						<section class="links-body">
+							<a class="link" href="restaurant.html">
+								<span class="link-image"><span><img src="css/images/small1.jpg" alt=""></span></span>
+								<span class="link-text">
+									<strong class="link-title">Име на заведението</strong>
+									<span class="link-description">Описание на заведението</span>
+								</span>
+							</a>
+							<a class="link" href="04-hut-single.html">
+								<span class="link-image"><span><img src="css/images/small2.jpg" alt=""></span></span>
+								<span class="link-text">
+									<strong class="link-title">Име на заведението</strong>
+									<span class="link-description">Описание на заведението</span>
+								</span>
+							</a>
+							<a class="link" href="restaurant.html">
+								<span class="link-image"><span><img src="css/images/small3.jpg" alt=""></span></span>
+								<span class="link-text">
+									<strong class="link-title">Име на заведението</strong>
+									<span class="link-description">Описание на заведението</span>
+								</span>
+							</a>
+							<a class="link" href="04-hut-single.html">
+								<span class="link-image"><span><img src="css/images/small4.jpg" alt=""></span></span>
+								<span class="link-text">
+									<strong class="link-title">Име на заведението</strong>
+									<span class="link-description">Описание на заведението</span>
+								</span>
+							</a>
+						</section><!-- /links-body -->
+						
+						<footer class="links-footer">
+							<a class="more" href="02-restaurants.html">Виж всички в радиус според отдалеченост</a>
+						</footer>
+					</section><!-- /links -->
+				</section><!-- /links-group -->
+			</section><!-- /adventure -->
+		</div><!-- /shell -->
+	</section><!-- /main -->
+<!--#include virtual="ssi/footer.shtml" -->

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forms version="1.8.5">
+	<form labelPlacement="top_label" useCurrentUserAsAuthor="1">
+		<title><![CDATA[Touristic - profile]]></title>
+		<descriptionPlacement><![CDATA[below]]></descriptionPlacement>
+		<button type="text">
+			<text><![CDATA[Запази]]></text>
+		</button>
+		<fields>
+			<field id="1" size="medium" type="name" nameFormat="simple">
+				<defaultValue><![CDATA[Ванко 1]]></defaultValue>
+				<label><![CDATA[Потребителско име]]></label>
+			</field>
+			<field id="14" size="medium" type="name" nameFormat="simple">
+				<defaultValue><![CDATA[Иван]]></defaultValue>
+				<label><![CDATA[Име]]></label>
+			</field>
+			<field id="13" size="medium" type="name" nameFormat="simple">
+				<defaultValue><![CDATA[Иванов]]></defaultValue>
+				<label><![CDATA[Фамилия]]></label>
+			</field>
+			<field id="3" size="medium" type="date" calendarIconType="none" dateType="datepicker" dateFormat="dmy_dot">
+				<defaultValue><![CDATA[дд.мм.гггг]]></defaultValue>
+				<label><![CDATA[Дата на раждане]]></label>
+			</field>
+			<field id="4" size="medium" type="text">
+				<defaultValue><![CDATA[Варна]]></defaultValue>
+				<label><![CDATA[Местожителство]]></label>
+			</field>
+			<field id="5" size="medium" type="textarea">
+				<defaultValue><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis accusamus repudiandae impedit possimus adipisci aut quae iusto, nesciunt odit ducimus cupiditate unde tempore aspernatur nulla tempora distinctio quis eius commodi!]]></defaultValue>
+				<label><![CDATA[За мен]]></label>
+			</field>
+			<field id="12" size="medium" type="email">
+				<defaultValue><![CDATA[ivan_ivanov@gmail.com]]></defaultValue>
+				<label><![CDATA[Email]]></label>
+			</field>
+			<field id="15" size="medium" type="text">
+				<defaultValue><![CDATA[http://ivanivanov.com]]></defaultValue>
+				<label><![CDATA[Уебсайт]]></label>
+			</field>
+			<field id="7" size="medium" type="text">
+				<defaultValue><![CDATA[https://www.facebook.com/]]></defaultValue>
+				<label><![CDATA[Facebook]]></label>
+			</field>
+			<field id="8" size="medium" type="text">
+				<defaultValue><![CDATA[https://twitter.com/]]></defaultValue>
+				<label><![CDATA[Twitter]]></label>
+			</field>
+			<field id="9" size="medium" type="text">
+				<defaultValue><![CDATA[https://plus.google.com/]]></defaultValue>
+				<label><![CDATA[Google+]]></label>
+			</field>
+			<field id="11" size="medium" type="text">
+				<defaultValue><![CDATA[http://instagram.com/]]></defaultValue>
+				<label><![CDATA[Instagram]]></label>
+			</field>
+		</fields>
+		<confirmations>
+			<confirmation id="544954f85a524" isDefault="1" type="message">
+				<name><![CDATA[Default Confirmation]]></name>
+				<message><![CDATA[Thanks for contacting us! We will get in touch with you shortly.]]></message>
+			</confirmation>
+		</confirmations>
+		<notifications>
+			<notification id="544954f8542fe">
+				<to><![CDATA[{admin_email}]]></to>
+				<name><![CDATA[Admin Notification]]></name>
+				<event><![CDATA[form_submission]]></event>
+				<toType><![CDATA[email]]></toType>
+				<subject><![CDATA[New submission from {form_title}]]></subject>
+				<message><![CDATA[{all_fields}]]></message>
+			</notification>
+		</notifications>
+	</form>
+</forms>
