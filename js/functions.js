@@ -321,7 +321,7 @@
 
 	function mapSize(){
 		if ( $details.length && $map.length ) {
-			$map.height($details.height());
+			$map.height( winWidth > 767 ? $details.height() : 'auto' );
 			
 			if ( $('.lt-ie9').length ) {
 				$map.width($map.parents('.details').width() - $map.siblings('.list-table').outerWidth(true));

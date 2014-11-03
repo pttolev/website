@@ -28,34 +28,41 @@
 <body>
 <div class="container">
 	<header class="header" id="header">
-		<div class="shell">
+		<div class="shell clearfix">
 			<div class="logo">
 				<a href="01-home.html">Brand</a>
 			</div>
-
+			
 			<a class="nav-btn" id="nav-btn" href="#"><span></span><span></span><span></span></a>
 
-			<nav class="utilities">
-				<ul class="clearfix">
-					<li><a href="14-coordinates.html"><small class="icon icon-location-4"></small>Моите координати</a></li>
-					<li><a href="forecast.html"><small class="icon icon-sun-1"></small>Прогноза за времето</a></li>
-					<li class="button-profile" id="button-profile">
-						<a href="#">Панайот <img src="css/images/avatar.jpg" alt=""></a>
+			<div class="utilities">
+				<nav class="utility-nav">
+					<ul class="clearfix">
+						<li><a href="14-coordinates.html"><small class="icon icon-location-4"></small><span>Моите координати</span></a></li>
+						<li><a href="forecast.html"><small class="icon icon-sun-1"></small><span>Прогноза за времето</span></a></li>
+					</ul>
+				</nav>
+				
+				<div class="user-state">
+					<ul>
+						<li class="button-profile" id="button-profile">
+							<a href="#">Панайот <img src="css/images/avatar.jpg" alt=""></a>
 
-						<div class="button-profile-dropdown">
-							<ul>
-								<li><a href="12-profile.html">Лични данни</a></li>
-								<li><a href="achievements.html">Постижения</a></li>
-								<li><a href="14-visited.html">Посетени</a></li>
-								<li><a href="14-bookmarks.html">Отметки</a></li>
-								<li><a href="plans.html">Планове</a></li>
-								<li><a href="02-organized.html">Организирани</a></li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-			</nav>
-			
+							<div class="button-profile-dropdown">
+								<ul>
+									<li><a href="12-profile.html">Лични данни</a></li>
+									<li><a href="achievements.html">Постижения</a></li>
+									<li><a href="14-visited.html">Посетени</a></li>
+									<li><a href="14-bookmarks.html">Отметки</a></li>
+									<li><a href="plans.html">Планове</a></li>
+									<li><a href="02-organized.html">Организирани</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div><!-- /user-state -->
+			</div><!-- /utilities -->
+
 			<div class="navbar">
 				<nav class="nav" id="nav">
 					<ul class="clearfix">
@@ -85,6 +92,8 @@
 
 							<ul>
 								<li><a href="02-restaurants.html">Места за хапване</a></li>
+								<li><a href="09-gallery.html">Галерии</a></li>
+								<li><a href="09-videos.html">Видеоклипове</a></li>
 							</ul>
 						</li>
 						<li><a href="13-organize.html">Организирай преход</a></li>
