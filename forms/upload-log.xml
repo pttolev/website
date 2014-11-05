@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forms version="1.8.5">
+	<form labelPlacement="top_label" useCurrentUserAsAuthor="1">
+		<title><![CDATA[Touristic - upload log]]></title>
+		<descriptionPlacement><![CDATA[below]]></descriptionPlacement>
+		<button type="text">
+			<text><![CDATA[Submit]]></text>
+		</button>
+		<fields>
+			<field id="1" size="medium" type="fileupload">
+				<description><![CDATA[Път към файла]]></description>
+				<label><![CDATA[Качи файл]]></label>
+			</field>
+			<field id="2" size="medium" type="text">
+				<label><![CDATA[Наименование на прехода]]></label>
+			</field>
+			<field id="3" size="medium" type="textarea">
+				<label><![CDATA[Информация за прехода]]></label>
+			</field>
+			<field id="4" size="medium" type="select">
+				<label><![CDATA[Категория]]></label>
+				<choices>
+					<choice>
+						<text><![CDATA[Екопътека]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[Преход]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[Офроуд]]></text>
+					</choice>
+				</choices>
+			</field>
+			<field id="5" size="medium" type="select">
+				<label><![CDATA[Сезон]]></label>
+				<choices>
+					<choice>
+						<text><![CDATA[Пролетен]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[Летен]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[Есенен]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[Зимен]]></text>
+					</choice>
+				</choices>
+			</field>
+			<field id="6" size="medium" type="select">
+				<label><![CDATA[Област]]></label>
+				<choices>
+					<choice>
+						<text><![CDATA[София]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[Варна]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[Ямбол]]></text>
+					</choice>
+				</choices>
+			</field>
+			<field id="7" size="medium" type="select">
+				<label><![CDATA[Планина]]></label>
+				<choices>
+					<choice>
+						<text><![CDATA[Стара Планина]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[Рила]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[Пирин]]></text>
+					</choice>
+				</choices>
+			</field>
+			<field id="8" size="medium" type="text">
+				<label><![CDATA[Начална точка]]></label>
+			</field>
+			<field id="9" size="medium" type="text">
+				<label><![CDATA[Начална точка - координати]]></label>
+			</field>
+			<field id="10" size="medium" type="text">
+				<label><![CDATA[Крайна точка]]></label>
+			</field>
+			<field id="11" size="medium" type="text">
+				<label><![CDATA[Крайна точка - координати]]></label>
+			</field>
+			<field id="12" size="medium" type="text">
+				<label><![CDATA[Дължина]]></label>
+			</field>
+			<field id="13" size="medium" type="text">
+				<label><![CDATA[Времетраене]]></label>
+			</field>
+			<field id="14" size="medium" type="select">
+				<label><![CDATA[Качество на маркировката]]></label>
+				<choices>
+					<choice>
+						<text><![CDATA[Няма]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[Лоша]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[Средна]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[Добра]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[Отлична]]></text>
+					</choice>
+				</choices>
+			</field>
+			<field id="15" size="medium" type="select">
+				<label><![CDATA[Трудност]]></label>
+				<choices>
+					<choice>
+						<text><![CDATA[Елементарно]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[Лесно]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[Средно]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[Трудно]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[Екстремно]]></text>
+					</choice>
+				</choices>
+			</field>
+			<field id="16" size="medium" type="textarea">
+				<cssClass><![CDATA[field-new-button]]></cssClass>
+				<label><![CDATA[Бележки]]></label>
+			</field>
+			<field id="17" size="medium" type="textarea">
+				<cssClass><![CDATA[field-new-button]]></cssClass>
+				<label><![CDATA[Програма]]></label>
+			</field>
+		</fields>
+		<confirmations>
+			<confirmation id="545a6ce5f2240" isDefault="1" type="message">
+				<name><![CDATA[Default Confirmation]]></name>
+				<message><![CDATA[Thanks for contacting us! We will get in touch with you shortly.]]></message>
+			</confirmation>
+		</confirmations>
+		<notifications>
+			<notification id="545a6ce5de02b">
+				<to><![CDATA[{admin_email}]]></to>
+				<name><![CDATA[Admin Notification]]></name>
+				<event><![CDATA[form_submission]]></event>
+				<toType><![CDATA[email]]></toType>
+				<subject><![CDATA[New submission from {form_title}]]></subject>
+				<message><![CDATA[{all_fields}]]></message>
+			</notification>
+		</notifications>
+	</form>
+</forms>

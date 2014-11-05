@@ -75,23 +75,30 @@
 			}
 		});
 
+		//file upload field
+		$('.gfield-fileupload').on('change', 'input', function(){
+			var $this = $(this);
+
+			$this.parents('.gfield-fileupload').find('.gfield_description').text($this.val());
+		});
+
+		//add new field
+		$('.gfield-new-button').append('<a class="button" href="#">Добави поле</a>');
+
+		$('.gfield-new-button').on('click', '.button', function(e){
+			var $this = $(this);
+			var $field = $this.siblings('.ginput_container:first');
+			var clone = $field.clone();
+			clone.insertBefore($this);
+
+			e.preventDefault();
+		});
+
 		//header buttons
 		$('#nav-btn').on('click', function(e){
 			$header.toggleClass('open');
 
 			e.preventDefault();
-		});
-
-		$('#nav').on('click', 'a', function(e){
-			var $this = $(this);
-
-			if ( $this.siblings('ul').length ) {
-				$this.parent().toggleClass('open').siblings().removeClass('open');
-			}
-
-			if ( winWidth <= 1024 ) {
-				e.preventDefault();
-			}
 		});
 
 		$buttonProfile.children('a').on('click', function(e){
@@ -205,15 +212,6 @@
 		backgroundResize();
 	});
 
-	//window scroll functions
-	$win.on('scroll', function(){
-		if ( winWidth <= 1024 ) {
-			if ( $header.hasClass('open') ) {
-				$header.removeClass('open');
-			}
-		}
-	});
-
 	//window resize functions
 	$win.on('resize', function(){
 		winWidth = $win.width();
@@ -251,12 +249,11 @@
 		myLat = position.coords.latitude;
 		myLng = position.coords.longitude;
 
-		alert( 'success ');
 		window.location.href = 'http://maps.google.com/maps?saddr=' + myLat + ',' + myLng + '&daddr=41.4375720,23.5060176';
 	}
 
 	function geoError(){
-		alert( 'error' );
+		alert( 'Моля включете вашият GPS' );
 
 		switch(error.code) {
 			case error.PERMISSION_DENIED:
