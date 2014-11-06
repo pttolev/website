@@ -39,9 +39,16 @@
 				<nav class="utility-nav">
 					<ul class="clearfix">
 						<li><a href="14-coordinates.html"><small class="icon icon-location-4"></small><span>Моите координати</span></a></li>
-						<li><a href="forecast.html"><small class="icon icon-sun-1"></small><span>Прогноза за времето</span></a></li>
+						<li><a href="forecast.html"><small class="icon icon-sun-1"></small><span>Прогноза</span></a></li>
 					</ul>
 				</nav>
+				
+				<form method="get" class="searchform" action="#"> 
+					<div>
+						<input type="text" value="" name="s" placeholder="Намери..."> 
+						<input type="submit" class="searchsubmit" value="">
+					</div> 
+				</form>
 				
 				<div class="user-state">
 					<ul>
@@ -51,10 +58,9 @@
 							<div class="button-profile-dropdown">
 								<ul>
 									<li><a href="12-profile.html">Лични данни</a></li>
-									<li><a href="achievements.html">Постижения</a></li>
 									<li><a href="14-visited.html">Посетени</a></li>
 									<li><a href="14-bookmarks.html">Отметки</a></li>
-									<li><a href="plans.html">Планове</a></li>
+									<li><a href="02-plans.html">Планове</a></li>
 									<li><a href="02-organized.html">Организирани</a></li>
 								</ul>
 							</div>
@@ -87,7 +93,7 @@
 								<li><a href="02-hotels.html">Хотели</a></li>
 							</ul>
 						</li>
-						<li><a href="events.html">Събития</a></li>
+						<li><a href="15-events.html">Събития</a></li>
 						<li class="has-dropdown">
 							<a href="02-stuff.html">Разни</a>
 

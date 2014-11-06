@@ -3,6 +3,7 @@
 		$win = $(window),
 		$backgroundImage,
 		$buttonProfile,
+		$searchform,
 		$mapCanvas,
 		$header,
 		$map,
@@ -24,6 +25,7 @@
 	$doc.on('ready', function(){
 		$backgroundImage   = $('.background-image');
 		$buttonProfile     = $('.button-profile');
+		$searchform        = $('.searchform');
 		$details           = $('#details');
 		$mapCanvas         = $('#map-canvas');
 		$header            = $('#header');
@@ -61,6 +63,10 @@
 				});
 		}
 
+		if ( $searchform.find('input[type="text"]').val() != '' ) {
+			$searchform.find('input[type="text"]').val('');
+		}
+
 		//form subtotal calculation
 		$('.gfield-participants').on('keyup', 'input', function(){
 			var $subtotal = $('#booking-subtotal'),
@@ -69,11 +75,39 @@
 				subtotal  = price*quantity;
 
 			if ( price === parseInt(price) && price ) {
-				$subtotal.text( subtotal + 'лв' );
+				$subtotal.text( subtotal + 'lv' );
 			} else {
 				$subtotal.text('');
 			}
 		});
+
+		//search mobile
+		$header.find('.searchform').on('click', '.searchsubmit', function(e){
+			var $this  = $(this),
+				$field = $this.siblings('input'),
+				$form  = $this.parents('.searchform');
+
+			if ( $form.hasClass('open') ) {
+				$field.blur();
+			} else {
+				$field.focus();
+			}
+
+			if ( $field.val() == '' ) {
+				$form.toggleClass('open');
+
+				e.preventDefault();
+			}
+		});
+
+		/*$header.find('.searchform').on('focusout', 'input[type="text"]', function(e){
+			var $this = $(this);
+
+			if ( $this.val() != '' ) {
+				$this.val('');
+			}
+			$this.parents('.searchform').removeClass('open');
+		});*/
 
 		//file upload field
 		$('.gfield-fileupload').on('change', 'input', function(){
@@ -83,7 +117,7 @@
 		});
 
 		//add new field
-		$('.gfield-new-button').append('<a class="button" href="#">Добави поле</a>');
+		$('.gfield-new-button').append('<a class="button" href="#">Add field</a>');
 
 		$('.gfield-new-button').on('click', '.button', function(e){
 			var $this = $(this);
@@ -227,7 +261,7 @@
 			navigator.geolocation.getCurrentPosition(geoNavigate, geoError);
 		} else { 
 			alert( 'is not locating ')
-			$('.my-coordinates').html('<p>Вашият браузър не поддържа тази функция')
+			$('.my-coordinates').html('<p>Your browser does not support this function');
 		}
 	}
 
@@ -253,7 +287,7 @@
 	}
 
 	function geoError(){
-		alert( 'Моля включете вашият GPS' );
+		alert( 'Please turn your GPS on' );
 
 		switch(error.code) {
 			case error.PERMISSION_DENIED:

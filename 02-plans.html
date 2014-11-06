@@ -7,7 +7,7 @@
 				<div class="slide-text">
 					<div class="shell">
 						<div class="slide-text-inner">
-							<h1>Хотели</h1>
+							<h1>Планове</h1>
 						</div>
 					</div>
 				</div>
@@ -20,22 +20,63 @@
 			<nav class="breadcrumbs">
 				<ul>
 					<li><a href="01-home.html">Начало</a></li>
-					<li><a href="02-nights.html">Нощувки</a></li>
-					<li>Хотели</li>
+					<li><a href="02-nights.html">Профил</a></li>
+					<li>Планове</li>
 				</ul>
 			</nav><!-- /breadcrumbs -->
 
 			<section class="content left">
-				<title class="title">
-					<h2>Списък на хотелите</h2>
+				<header class="title">
+					<h2>Списък на плановете</h2>
 
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, corrupti dolor. Ut corrupti, similique omnis.</p>
-				</title><!-- /title -->
+				</header><!-- /title -->
+
+				<div class="map" id="map">
+					<div class="map-canvas" id="map-canvas">
+					</div><!-- /map-canvas -->
+
+					<div class="markers" id="markers">
+						<a href="#" data-lat="42.13323" data-lng="23.3401917" data-icon="css/images/marker-monastery.png" data-title="Рилски Манастир" data-text="+359 089 687 2010"></a>
+						<a href="#" data-lat="42.785669" data-lng="26.524937" data-icon="css/images/marker-restaurant.png" data-title="Караджейката" data-text="+359 4582 2180 <br>+359 878 201 448"></a>
+						<a href="#" data-lat="42.18893" data-lng="23.37423" data-icon="css/images/marker-hut.png" data-title="хижа Мальовица" data-text="+359 885 232 325 <br> +359 887 841 220"></a>
+						<a href="#" data-lat="42.68137" data-lng="23.32006" data-icon="css/images/marker-hotel.png" data-title="хотел Хилтън" data-text="+359 883 333 333"></a>
+						<a href="#" data-lat="42.10354" data-lng="23.27121" data-icon="css/images/marker-shelter.png" data-title="заслон Кобилно Бранище" data-text=""></a>
+					</div>
+				</div><!-- /map -->
 
 				<aside class="filter">
 					<h3>Сортирай по:</h3>
 					
 					<div class="filter-items clearfix">
+						<div class="filter-item">
+							<label for="filter-category">Тип</label>
+
+							<div class="select">
+								<select id="filter-category">
+									<option>Всички</option>
+									<option>Пешеходен маршрут</option>
+									<option>Офроуд маршрут</option>
+									<option>Забележителност</option>
+									<option>Хотел</option>
+									<option>Хижа</option>
+								</select>
+							</div>
+						</div><!-- /filter-item -->
+
+						<div class="filter-item">
+							<label for="filter-category">Планина</label>
+
+							<div class="select">
+								<select id="filter-category">
+									<option>Всички</option>
+									<option>Рила</option>
+									<option>Пирин</option>
+									<option>Родопи</option>
+								</select>
+							</div>
+						</div><!-- /filter-item -->
+
 						<div class="filter-item">
 							<label for="filter-category">Област</label>
 
@@ -61,97 +102,41 @@
 								</select>
 							</div>
 						</div><!-- /filter-item -->
-
-						<div class="filter-item">
-							<label for="filter-category">Планина</label>
-
-							<div class="select">
-								<select id="filter-category">
-									<option>Всички</option>
-									<option>Рила</option>
-									<option>Пирин</option>
-									<option>Родопи</option>
-								</select>
-							</div>
-						</div><!-- /filter-item -->
-
-						<div class="filter-item">
-							<label for="filter-category">Надм. височина</label>
-
-							<div class="select">
-								<select id="filter-category">
-									<option>Всички</option>
-									<option>до 500м</option>
-									<option>500м - 1000м</option>
-									<option>1000м - 1500м</option>
-									<option>1500м - 2000м</option>
-									<option>над 2000м</option>
-								</select>
-							</div>
-						</div><!-- /filter-item -->
-
-						<div class="filter-item">
-							<label for="filter-category">Брой легла</label>
-
-							<div class="select">
-								<select id="filter-category">
-									<option>Всички</option>
-									<option>до 10</option>
-									<option>10 - 20</option>
-									<option>20-50</option>
-									<option>50 - 100</option>
-									<option>над 100</option>
-								</select>
-							</div>
-						</div><!-- /filter-item -->
-
-						<div class="filter-item">
-							<label for="filter-category">Категоризация</label>
-
-							<div class="select">
-								<select id="filter-category">
-									<option>Всички</option>
-									<option>1 звезда</option>
-									<option>2 звезди</option>
-									<option>3 звезди</option>
-									<option>4 звезди</option>
-									<option>5 звезди</option>
-								</select>
-							</div>
-						</div><!-- /filter-item -->
 					</div><!-- /filter-items -->
 				</aside><!-- /filter -->
 				
 				<section class="list">
 					<div class="list-item">
-						<a class="list-item-image" href="04-hut-single.html"><span><img src="css/images/thumb1.jpg" alt=""></span></a>
+						<a class="list-item-image" href="04-monastery-single.html"><span><img src="css/images/thumb1.jpg" alt=""></span></a>
 
 						<div class="list-item-text">
-							<h4><a href="04-hotel-single.html">Наименование на хотел номер 1</a> <small>- 200лв</small></h4>
+							<h4><a href="04-monastery-single.html">Наименование на място номер 1</a></h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque eveniet consequatur sit repellat, qui cupiditate, alias ratione ipsam quis ex quam ab quia fuga. Similique, magni eligendi exercitationem ad nam consequatur, molestiae repudiandae natus enim voluptatibus facere dolores sint, eos voluptate nesciunt rerum id. Omnis nesciunt voluptas eius odio dolor!</p>
 
 							<ul class="list-item-meta">
-								<li><small class="icon icon-commerical-building"></small> Хотел</li>
-								<li><small class="icon icon-location"></small> София</li>
+								<li><small class="icon icon-religious-christian"></small> Манастир</li>
+								<li><small class="icon icon-location"></small> Кюстендил</li>
 							</ul>
 
-							<a class="button" href="04-hotel-single.html">Прочети Повече</a>
+							<a class="button" href="04-monastery-single.html">Прочети Повече</a>
+							<a class="button" href="#">Добави в планове</a>
 						</div>
 					</div><!-- /list-item -->
 
 					<div class="list-item">
-						<a class="list-item-image" href="04-hotel-single.html"><span><img src="css/images/thumb4.jpg" alt=""></span></a>
+						<a class="list-item-image" href="04-shelter-single.html"><span><img src="css/images/thumb4.jpg" alt=""></span></a>
 
 						<div class="list-item-text">
-							<h4><a href="04-hotel-single.html">Наименование на хотел номер 2</a></h4>
+							<h4><a href="04-shelter-single.html">Наименование на място номер 2</a></h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque eveniet consequatur sit repellat, qui cupiditate, alias ratione ipsam quis ex quam ab quia fuga. Similique, magni eligendi exercitationem ad nam consequatur, molestiae repudiandae natus enim voluptatibus facere dolores sint, eos voluptate nesciunt rerum id. Omnis nesciunt voluptas eius odio dolor!</p>
 
 							<ul class="list-item-meta">
-								<li><small class="icon icon-commerical-building"></small> Хотел</li>
-								<li><small class="icon icon-location"></small> София</li>
+								<li><small class="icon icon-campsite"></small> Заслон</li>
+								<li><small class="icon icon-location"></small> Кюстендил</li>
 							</ul>
 
-							<a class="button" href="04-hotel-single.html">Прочети Повече</a>
+							<a class="button" href="04-shelter-single.html">Прочети Повече</a>
+							<a class="button" href="#">Добави в планове</a>
 						</div>
 					</div><!-- /list-item -->
 
@@ -159,7 +144,7 @@
 						<a class="list-item-image" href="04-hotel-single.html"><span><img src="css/images/thumb3.jpg" alt=""></span></a>
 
 						<div class="list-item-text">
-							<h4><a href="04-hotel-single.html">Наименование на хотел номер 3</a> <small>- 200лв</small></h4>
+							<h4><a href="04-hotel-single.html">Наименование на място номер 3</a></h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque eveniet consequatur sit repellat, qui cupiditate, alias ratione ipsam quis ex quam ab quia fuga. Similique, magni eligendi exercitationem ad nam consequatur, molestiae repudiandae natus enim voluptatibus facere dolores sint, eos voluptate nesciunt rerum id. Omnis nesciunt voluptas eius odio dolor!</p>
 
 							<ul class="list-item-meta">
@@ -168,39 +153,41 @@
 							</ul>
 
 							<a class="button" href="04-hotel-single.html">Прочети Повече</a>
+							<a class="button" href="#">Добави в планове</a>
 						</div>
 					</div><!-- /list-item -->
 
 					<div class="list-item">
-						<a class="list-item-image" href="04-hotel-single.html"><span><img src="css/images/thumb5.jpg" alt=""></span></a>
+						<a class="list-item-image" href="04-monastery-single.html"><span><img src="css/images/thumb5.jpg" alt=""></span></a>
 
 						<div class="list-item-text">
-							<h4><a href="04-hotel-single.html">Наименование на хотел номер 4</a></h4>
+							<h4><a href="04-monastery-single.html">Наименование на място номер 4</a></h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque eveniet consequatur sit repellat, qui cupiditate, alias ratione ipsam quis ex quam ab quia fuga. Similique, magni eligendi exercitationem ad nam consequatur, molestiae repudiandae natus enim voluptatibus facere dolores sint, eos voluptate nesciunt rerum id. Omnis nesciunt voluptas eius odio dolor!</p>
 
 							<ul class="list-item-meta">
-								<li><small class="icon icon-commerical-building"></small> Хотел</li>
-								<li><small class="icon icon-location"></small> София</li>
+								<li><small class="icon icon-religious-christian"></small> Манастир</li>
+								<li><small class="icon icon-location"></small> Кюстендил</li>
 							</ul>
 
-							<a class="button" href="04-hotel-single.html">Прочети Повече</a>
+							<a class="button" href="04-monastery-single.html">Прочети Повече</a>
+							<a class="button" href="#">Добави в планове</a>
 						</div>
 					</div><!-- /list-item -->
 				</section><!-- /list -->
 
 				<footer class="wp-pagenavi-container">
 					<div class="wp-pagenavi">
-						<a class="firstpostlink" href="02-hotels.html">1</a>
+						<a class="firstpostlink" href="02-plans.html">1</a>
 
-						<a href="02-hotels.html" class="previouspostslink"><i class="icon icon-left-open"></i></a>
-						<a href="02-hotels.html" class="smaller">1</a>
+						<a href="02-plans.html" class="previouspostslink"><i class="icon icon-left-open"></i></a>
+						<a href="02-plans.html" class="smaller">1</a>
 
 						<span class="current">2</span>
 
-						<a href="02-hotels.html" class="larger">3</a>
-						<a href="02-hotels.html" class="larger">4</a>
-						<a href="02-hotels.html" class="nextpostslink"><i class="icon icon-right-open"></i></a>
-						<a class="lastpostlink" href="02-hotels.html">24</a>
+						<a href="02-plans.html" class="larger">3</a>
+						<a href="02-plans.html" class="larger">4</a>
+						<a href="02-plans.html" class="nextpostslink"><i class="icon icon-right-open"></i></a>
+						<a class="lastpostlink" href="02-plans.html">24</a>
 					</div>
 				</footer>
 			</section><!-- /content -->
@@ -238,11 +225,11 @@
 						<h5 class="widgettitle">Свързани линкове</h5>
 
 						<ul>
-							<li><a href="04-hut-single.html">Lorem ipsum dolor sit amet.</a></li>
-							<li><a href="04-hut-single.html">Lorem ipsum dolor sit amet.</a></li>
-							<li><a href="04-hut-single.html">Lorem ipsum dolor sit amet.</a></li>
-							<li><a href="04-hut-single.html">Lorem ipsum dolor sit amet.</a></li>
-							<li><a href="04-hut-single.html">Lorem ipsum dolor sit amet.</a></li>
+							<li><a href="04-shelter-single.html">Lorem ipsum dolor sit amet.</a></li>
+							<li><a href="04-shelter-single.html">Lorem ipsum dolor sit amet.</a></li>
+							<li><a href="04-shelter-single.html">Lorem ipsum dolor sit amet.</a></li>
+							<li><a href="04-shelter-single.html">Lorem ipsum dolor sit amet.</a></li>
+							<li><a href="04-shelter-single.html">Lorem ipsum dolor sit amet.</a></li>
 						</ul>
 					</li><!-- /widget -->
 
