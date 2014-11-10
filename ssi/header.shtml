@@ -11,10 +11,13 @@
 	<link rel="shortcut icon" href="css/images/favicon.ico">
 	<link rel="stylesheet"href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,700,800,400,600&amp;subset=latin,cyrillic-ext" type="text/css">
 	<link rel="stylesheet" href="css/fontello.css" type="text/css">
+	<link rel="stylesheet" href="css/fullcalendar.css" type="text/css">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNHMrXcpS7bcg1Q7kFkK9wRrCTDM69uXo&amp;sensor=false&amp;libraries=weather&amp;sensor=true"></script>
 	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/moment.min.js"></script>
+	<script src="js/fullcalendar.min.js"></script>
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/jquery.fs.selecter.min.js"></script>
 	<script src="js/jquery.flexslider-min.js"></script>

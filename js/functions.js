@@ -14,6 +14,7 @@
 		$graphNumber,
 		$formField,
 		$buttonCoordinates,
+		$gfieldNew,
 		winWidth,
 		isMobile,
 		myLat,
@@ -37,6 +38,7 @@
 		$graphMeter        = $('.graph-meter');
 		$formField         = $('.gfield, .form-row');
 		$buttonCoordinates = $('#button-coordinates');
+		$gfieldNew         = $('.gfield-new-button');
 
 		winWidth = $win.width();
 
@@ -68,7 +70,7 @@
 		}
 
 		//form subtotal calculation
-		$('.gfield-participants').on('keyup', 'input', function(){
+		$('.gfield-participants').find('input').on('keyup', function(){
 			var $subtotal = $('#booking-subtotal'),
 				price     = parseInt($(this).val()),
 				quantity  = parseInt($('#booking-price').text()),
@@ -82,7 +84,7 @@
 		});
 
 		//search mobile
-		$header.find('.searchform').on('click', '.searchsubmit', function(e){
+		$header.find('.searchsubmit').on('click', function(e){
 			var $this  = $(this),
 				$field = $this.siblings('input'),
 				$form  = $this.parents('.searchform');
@@ -110,19 +112,20 @@
 		});*/
 
 		//file upload field
-		$('.gfield-fileupload').on('change', 'input', function(){
+		$('.gfield-fileupload').find('input').on('change', function(){
 			var $this = $(this);
 
 			$this.parents('.gfield-fileupload').find('.gfield_description').text($this.val());
 		});
 
 		//add new field
-		$('.gfield-new-button').append('<a class="button" href="#">Add field</a>');
+		$gfieldNew.append('<a class="button" href="#">Add field</a>');
 
-		$('.gfield-new-button').on('click', '.button', function(e){
-			var $this = $(this);
-			var $field = $this.siblings('.ginput_container:first');
-			var clone = $field.clone();
+		$gfieldNew.on('click', '.button', function(e){
+			var $this = $(this),
+				$field = $this.siblings('.ginput_container:first'),
+				clone = $field.clone();
+
 			clone.insertBefore($this);
 
 			e.preventDefault();
@@ -171,8 +174,39 @@
 				});
 		});
 
+		//calendar functions
+		$('.calendar').each(function(){
+			var $this  = $(this),
+				height = $this.data('height');
+
+			$this.fullCalendar({
+				events: 'events/events.json',
+				firstDay: 1,
+				eventLimit: true,
+				height: height,
+				timeFormat: 'H(:mm)',
+				dayPopoverFormat: 'dddd, D MMMM',
+				dayNames: ['Неделя', 'Понеделник', 'Вторник', 'Сряда', 'Четвъртък', 'Петък', 'Събота'],
+				dayNamesShort: ['Нед', 'Пон', 'Вто', 'Сря', 'Чет', 'Пет', 'Съб'],
+				monthNames: ['Януари', 'Февруари', 'Март', 'Април', 'Май', 'Юни', 'Юли', 'Август', 'Септември', 'Октомвро', 'Ноември', 'Декември'],
+				monthNamesShort: ['Яну', 'Фев', 'Мар', 'Апр', 'Май', 'Юни', 'Юли', 'Авг', 'Сеп', 'Окт', 'Ное', 'Дек']
+			});
+		})
+
+		$('#button-calendar-prev').on('click', function(e){
+			$('.calendar').fullCalendar('prev');
+
+			e.preventDefault();
+		});
+
+		$('#button-calendar-next').on('click', function(e){
+			$('.calendar').fullCalendar('next');
+
+			e.preventDefault();
+		});
+
 		//ie8 clears
-		if ( $('.points').length && $('.lt-ie9').length ) {
+		if ( $('.lt-ie9').length && $('.points').length ) {
 			var $points = $('.points');
 			
 			if ( $('.content').length ) {
@@ -350,16 +384,6 @@
 		});
 	}
 
-	function mapSize(){
-		if ( $details.length && $map.length ) {
-			$map.height( winWidth > 767 ? $details.height() : 'auto' );
-			
-			if ( $('.lt-ie9').length ) {
-				$map.width($map.parents('.details').width() - $map.siblings('.list-table').outerWidth(true));
-			}
-		}
-	}
-
 	function backgroundResize(){
 		$backgroundImage.each(function(){
 			var $this = $(this);
@@ -393,6 +417,16 @@
 			'left': (containerW - image.width())/2
 		});
 	}
+	
+	function mapSize(){
+		if ( $details.length && $map.length ) {
+			$map.height( winWidth > 767 ? $details.height() : 'auto' );
+			
+			if ( $('.lt-ie9').length ) {
+				$map.width($map.parents('.details').width() - $map.siblings('.list-table').outerWidth(true));
+			}
+		}
+	}
 
 	function initialize(){
 		var mapOptions = {
@@ -413,6 +447,7 @@
 		var weatherLayer = new google.maps.weather.WeatherLayer({
 			temperatureUnits: google.maps.weather.TemperatureUnit.CELSIUM
 		});
+
 		weatherLayer.setMap(map);
 	}
 
