@@ -75,7 +75,10 @@
 											<input type="password" class="field" value="" placeholder="Повтори парола">
 										</div>
 									</div>
+
 									<input type="submit" class="button" value="Регистрация">
+
+									<a class="button button-facebook" href="#">Регистрация с Facebook</a>
 								</form>
 							</div>
 						</li>
@@ -95,7 +98,10 @@
 											<input type="password" class="field" value="" placeholder="Парола">
 										</div>
 									</div>
+
 									<input type="submit" class="button" value="Влез">
+
+									<a class="button button-facebook" href="#">Влез с Facebook</a>
 								</form>
 							</div>
 						</li>
