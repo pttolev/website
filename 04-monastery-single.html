@@ -2,14 +2,14 @@
 	<section class="slider slider-small background">
 		<ul class="slides">
 			<li class="slide">
-				<img class="background-image" src="css/images/slide1.jpg" alt="" width="1700" height="620">
+				<img class="background-image" src="css/images/slide6.jpg" alt="" width="1700" height="620">
 			</li>
 		</ul>
 	</section><!-- /slider -->
 
 	<section class="main">
 		<div class="shell clearfix">
-			<nav class="breadcrumbs">
+			<nav class="breadcrumbs" itemprop="breadcrumb">
 				<ul>
 					<li><a href="01-home.html">Начало</a></li>
 					<li><a href="02-nights.html">Нощувки</a></li>
@@ -18,9 +18,9 @@
 				</ul>
 			</nav><!-- /breadcrumbs -->
 			
-			<section class="adventure">
+			<section class="adventure" itemscope itemtype="http://schema.org/Hotel">
 				<header class="title">
-					<h2>Рилски Манастир</h2>
+					<h2 itemprop="name">Рилски Манастир</h2>
 
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, corrupti dolor. Ut corrupti, similique omnis.</p>
 				</header><!-- /title -->
@@ -53,20 +53,61 @@
 
 					<div class="list-table">
 						<ul>
-							<li><strong>Категория:</strong> <span>Манастир</span></li>
-							<li><strong>Област:</strong> <span><a href="#">Кюстендил</a></span></li>
-							<li><strong>Планина:</strong> <span><a href="#">Рила</a></span></li>
-							<li><strong>Координати:</strong> <span><em>42.13323,</em> <em>23.3401917</em></span></li>
-							<li><strong>Надм. височина:</strong> <span>1147м.</small></span></li>
-							<li><strong>Брой легла:</strong> <span>200</span></li>
-							<li><strong>Отопление:</strong> <span>Твърдо гориво</span></li>
-							<li><strong>Водоснабденост:</strong> <span>Да</span></li>
-							<li><strong>Електричество:</strong> <span>Да</span></li>
-							<li><strong>Кухня:</strong> <span>Да</span></li>
-							<li><strong>Уебсайт:</strong> <span><a href="http://www.rilamonastery.pmg-blg.com/" target="_blank">http://www.rilamonastery.pmg-blg.com/</a></span></li>
-							<li><strong>Адрес:</strong> <span>-</span></li>
-							<li><strong>Телефон:</strong> <span>+359 089 687 2010</span></li>
-							<li><strong>Достъпност:</strong> <span><em class="rating" data-readonly="true" data-score="5" data-star-off="star-on.png" data-star-off="star-off.png" data-hints='["Елементарно", "Лесно", "Средно", "Трудно", "Про"]'></em></span></li>
+							<li>
+								<strong>Категория:</strong>
+								<span>Манастир</span>
+							</li>
+							<li>
+								<strong>Област:</strong>
+								<span><a href="#" itemprop="addressRegion">Кюстендил</a></span>
+							</li>
+							<li>
+								<strong>Планина:</strong>
+								<span><a href="#">Рила</a></span>
+							</li>
+							<li>
+								<strong>Координати:</strong>
+								<span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates"><em itemprop="latitude">42.13323,</em> <em itemprop="longitude">23.3401917</em></span>
+							</li>
+							<li>
+								<strong>Надм. височина:</strong>
+								<span>1147м.</span>
+							</li>
+							<li>
+								<strong>Брой легла:</strong>
+								<span>200</span>
+							</li>
+							<li>
+								<strong>Отопление:</strong>
+								<span>Твърдо гориво</span>
+							</li>
+							<li>
+								<strong>Водоснабденост:</strong>
+								<span>Да</span>
+							</li>
+							<li>
+								<strong>Електричество:</strong>
+								<span>Да</span>
+							</li>
+							<li>
+								<strong>Кухня:</strong>
+								<span>Да</span>
+							</li>
+							<li>
+								<strong>Уебсайт:</strong>
+								<span itemprop="url"><a href="http://www.rilamonastery.pmg-blg.com/" target="_blank">http://www.rilamonastery.pmg-blg.com/</a></span>
+							</li>
+							<li>
+								<strong>Адрес:</strong>
+								<span itemprop="streetAddress">-</span>
+							</li>
+							<li>
+								<strong>Телефон:</strong>
+								<span itemprop="telephone">+359 089 687 2010</span>
+							</li>
+							<li>
+								<strong>Достъпност:</strong>
+								<span><em class="rating" data-readonly="true" data-score="5" data-star-on="star-on.png" data-star-off="star-off.png" data-hints='["Елементарно", "Лесно", "Средно", "Трудно", "Про"]'></em></span></li>
 						</ul>
 					</div>
 				</div><!-- /details -->
@@ -143,7 +184,7 @@
 						</header>
 						
 						<section class="links-body">
-							<a class="link" href="04-ho	tel-single.html">
+							<a class="link" href="04-hotel-single.html">
 								<span class="link-image"><span><img src="css/images/small1.jpg" alt=""></span></span>
 								<span class="link-text">
 									<strong class="link-title">Име на хотела</strong>
@@ -184,7 +225,7 @@
 						</header>
 						
 						<section class="links-body">
-							<a class="link" href="resta	urant.html">
+							<a class="link" href="04-restaurant-single.html">
 								<span class="link-image"><span><img src="css/images/small1.jpg" alt=""></span></span>
 								<span class="link-text">
 									<strong class="link-title">Име на заведението</strong>

@@ -9,7 +9,7 @@
 
 	<section class="main">
 		<div class="shell clearfix">
-			<nav class="breadcrumbs">
+			<nav class="breadcrumbs" itemprop="breadcrumb">
 				<ul>
 					<li><a href="01-home.html">Начало</a></li>
 					<li><a href="02-routes.html">Маршрути</a></li>
@@ -17,9 +17,9 @@
 				</ul>
 			</nav><!-- /breadcrumbs -->
 			
-			<section class="adventure">
+			<section class="adventure" itemscope itemtype="http://schema.org/Place">
 				<header class="title">
-					<h2>с. Петрово - вр. Гоцев връх</h2>
+					<h2 itemprop="name">с. Петрово - вр. Гоцев връх</h2>
 
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, corrupti dolor. Ut corrupti, similique omnis.</p>
 				</header><!-- /title -->
@@ -50,19 +50,55 @@
 
 					<div class="list-table">
 						<ul>
-							<li><strong>Категория:</strong> <span>Екопътека</span></li>
-							<li><strong>Сезон:</strong> <span>Зимен</span></li>
-							<li><strong>Област:</strong> <span><a href="06-blog-post.html">Благоевград</a></span></li>
-							<li><strong>Планина:</strong> <span><a href="06-blog-post.html">Славянка</a></span></li>
-							<li><strong>Начална точка:</strong> <span>с. Петрово <small>( 41.4375720, 23.5060176 )</small></span></li>
-							<li><strong>Крайна точка:</strong> <span>вр. Гоцев връх <small>( 41.3769950, 23.6205070 )</small></span></li>
-							<li><strong>Денивелация:</strong> <span>800м <small>1100м - 1900м</small></span></li>
-							<li><strong>Дължина:</strong> <span>28-44км</span></li>
-							<li><strong>Времетраене:</strong> <span>3 дни</span></li>
-							<li><strong>Информация:</strong> <span>13-11-2011</span></li>
-							<li><strong>Източник:</strong> <span><a href="http://bgmountains.org/" target="_blank">BG Mountains</a></span></li>
-							<li><strong>Маркировка:</strong> <span><em class="rating" data-readonly="true" data-score="4" data-star-off="star-on.png" data-star-off="star-off.png" data-hints='["Няма", "Лоша", "Средна", "Добра", "Отлична"]'></em></span></li>
-							<li><strong>Трудност:</strong> <span><em class="rating" data-readonly="true" data-score="4" data-star-off="star-on.png" data-star-off="star-off.png" data-hints='["Елементарно", "Лесно", "Средно", "Трудно", "Про"]'></em></span></li>
+							<li>
+								<strong>Категория:</strong>
+								<span>Екопътека</span>
+							</li>
+							<li>
+								<strong>Сезон:</strong>
+								<span>Зимен</span>
+							</li>
+							<li>
+								<strong>Област:</strong>
+								<span><a href="06-blog-post.html" itemprop="addressRegion">Благоевград</a></span>
+							</li>
+							<li>
+								<strong>Планина:</strong>
+								<span><a href="06-blog-post.html">Славянка</a></span>
+							</li>
+							<li>
+								<strong>Начална точка:</strong>
+								<span>с. Петрово <small itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">( <em itemprop="latitude">41.4375720</em>, <em itemprop="longitude">23.5060176</em> )</small></span></li>
+							<li>
+								<strong>Крайна точка:</strong>
+								<span>вр. Гоцев връх <small>( 41.3769950, 23.6205070 )</small></span>
+							</li>
+							<li>
+								<strong>Денивелация:</strong>
+								<span>800м <small>1100м - 1900м</small></span>
+							</li>
+							<li>
+								<strong>Дължина:</strong>
+								<span>28-44км</span>
+							</li>
+							<li>
+								<strong>Времетраене:</strong>
+								<span>3 дни</span>
+							</li>
+							<li>
+								<strong>Информация:</strong>
+								<span>13-11-2011</span>
+							</li>
+							<li>
+								<strong>Източник:</strong>
+								<span><a href="http://bgmountains.org/" target="_blank">BG Mountains</a></span>
+							</li>
+							<li>
+								<strong>Маркировка:</strong>
+								<span><em class="rating" data-readonly="true" data-score="4" data-star-on="star-on.png" data-star-off="star-off.png" data-hints='["Няма", "Лоша", "Средна", "Добра", "Отлична"]'></em></span></li>
+							<li>
+								<strong>Трудност:</strong>
+								<span><em class="rating" data-readonly="true" data-score="4" data-star-on="star-on.png" data-star-off="star-off.png" data-hints='["Елементарно", "Лесно", "Средно", "Трудно", "Про"]'></em></span></li>
 						</ul>
 					</div>
 				</div><!-- /details -->

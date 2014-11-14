@@ -2,24 +2,24 @@
 	<section class="slider slider-small background">
 		<ul class="slides">
 			<li class="slide">
-				<img class="background-image" src="css/images/slide1.jpg" alt="" width="1700" height="620">
+				<img class="background-image" src="css/images/slide9.jpg" alt="" width="1700" height="620">
 			</li>
 		</ul>
 	</section><!-- /slider -->
 
 	<section class="main">
 		<div class="shell clearfix">
-			<nav class="breadcrumbs">
+			<nav class="breadcrumbs" itemprop="breadcrumb">
 				<ul>
 					<li><a href="01-home.html">Начало</a></li>
 					<li><a href="15-events.html">Събития</a></li>
-					<li>Фестивал на носията</li>
+					<li>Фестивал на народната носия</li>
 				</ul>
 			</nav><!-- /breadcrumbs -->
 			
-			<section class="adventure">
+			<section class="adventure" itemprop="event" itemscope itemtype="http://schema.org/Event">
 				<header class="title">
-					<h2>Фестивал на носията</h2>
+					<h2 itemprop="name">Фестивал на народната носия</h2>
 
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, corrupti dolor. Ut corrupti, similique omnis.</p>
 				</header><!-- /title -->
@@ -52,11 +52,38 @@
 
 					<div class="list-table">
 						<ul>
-							<li><strong>Област:</strong> <span><a href="06-blog-post.html">Сливен</a></span></li>
-							<li><strong>Населено място:</strong> <span>Жеравна</span></li>
-							<li><strong>Координати:</strong> <span><em>42.83304,</em> <em>26.45903</em></span></li>
-							<li><strong>Уебсайт:</strong> <span><a href="http://www.nosia.bg/" target="_blank">http://www.nosia.bg/</a></span></li>
-							<li><strong>Адрес:</strong> <span>-</span></li>
+							<li>
+								<strong>Дата:</strong>
+								<span>
+									<meta itemprop="startDate" content="2015-08-21">
+									<meta itemprop="endDate" content="2015-08-23">
+									21 Август 2015
+								</span>
+							</li>
+							<li>
+								<strong>Област:</strong>
+								<span><a href="06-blog-post.html" itemprop="addressRegion">Сливен</a></span>
+							</li>
+							<li>
+								<strong>Населено място:</strong>
+								<span itemprop="location">Жеравна</span>
+							</li>
+							<li>
+								<strong>Координати:</strong>
+								<span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates"><em itemprop="latitude">42.83304,</em> <em itemprop="longitude">26.45903</em></span>
+							</li>
+							<li>
+								<strong>Уебсайт:</strong>
+								<span><a href="http://www.nosia.bg/" target="_blank" itemprop="url">http://www.nosia.bg/</a></span>
+							</li>
+							<li>
+								<strong>Адрес:</strong>
+								<span>-</span>
+							</li>
+							<li>
+								<strong>Facebook event:</strong>
+								<span><a href="https://www.facebook.com/groups/217962921663492/?fref=ts" target="_blank">Линк</a></span>
+							</li>
 						</ul>
 					</div>
 				</div><!-- /details -->
@@ -132,7 +159,7 @@
 						</header>
 						
 						<section class="links-body">
-							<a class="link" href="04-ho	tel-single.html">
+							<a class="link" href="04-hotel-single.html">
 								<span class="link-image"><span><img src="css/images/small1.jpg" alt=""></span></span>
 								<span class="link-text">
 									<strong class="link-title">Име на хотела</strong>
@@ -173,7 +200,7 @@
 						</header>
 						
 						<section class="links-body">
-							<a class="link" href="resta	urant.html">
+							<a class="link" href="04-restaurant-single.html">
 								<span class="link-image"><span><img src="css/images/small1.jpg" alt=""></span></span>
 								<span class="link-text">
 									<strong class="link-title">Име на заведението</strong>

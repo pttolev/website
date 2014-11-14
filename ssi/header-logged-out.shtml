@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en-US" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en-US" class="lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en-US" class="lt-ie9"> <![endif]-->
-<!--[if IE 9]>        <html lang="en-US" class="lt-ie10"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en-US"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html lang="bg-BG" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="bg-BG" class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="bg-BG" class="lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html lang="bg-BG" class="lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="bg-BG"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Туристически маршрути</title>
 	<link rel="shortcut icon" href="css/images/favicon.ico">
-	<link rel="stylesheet"href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,700,800,400,600&amp;subset=latin,cyrillic-ext" type="text/css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,700,800,400,600&amp;subset=latin,cyrillic-ext" type="text/css">
 	<link rel="stylesheet" href="css/fontello.css" type="text/css">
 	<link rel="stylesheet" href="css/fullcalendar.css" type="text/css">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
@@ -28,7 +28,7 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/WebPage">
 <div class="container">
 	<header class="header" id="header">
 		<div class="shell clearfix">

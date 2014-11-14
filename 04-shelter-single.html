@@ -2,14 +2,14 @@
 	<section class="slider slider-small background">
 		<ul class="slides">
 			<li class="slide">
-				<img class="background-image" src="css/images/slide1.jpg" alt="" width="1700" height="620">
+				<img class="background-image" src="css/images/slide6.jpg" alt="" width="1700" height="620">
 			</li>
 		</ul>
 	</section><!-- /slider -->
 
 	<section class="main">
 		<div class="shell clearfix">
-			<nav class="breadcrumbs">
+			<nav class="breadcrumbs" itemprop="breadcrumb">
 				<ul>
 					<li><a href="01-home.html">Начало</a></li>
 					<li><a href="02-nights.html">Нощувки</a></li>
@@ -18,9 +18,9 @@
 				</ul>
 			</nav><!-- /breadcrumbs -->
 			
-			<section class="adventure">
+			<section class="adventure" itemscope itemtype="http://schema.org/Place">
 				<header class="title">
-					<h2>заслон Кобилно Бранище</h2>
+					<h2 itemprop="name">заслон Кобилно Бранище</h2>
 
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, corrupti dolor. Ut corrupti, similique omnis.</p>
 				</header><!-- /title -->
@@ -53,20 +53,53 @@
 
 					<div class="list-table">
 						<ul>
-							<li><strong>Категория:</strong> <span>Заслон</span></li>
-							<li><strong>Област:</strong> <span><a href="06-blog-post.html">Кюстендил</a></span></li>
-							<li><strong>Планина:</strong> <span><a href="06-blog-post.html">Рила</a></span></li>
-							<li><strong>Координати:</strong> <span><em>42.10354,</em> <em>23.27121</em></span></li>
-							<li><strong>Надм. височина:</strong> <span>2145м.</small></span></li>
-							<li><strong>Брой легла:</strong> <span>20</span></li>
-							<li><strong>Отопление:</strong> <span>Твърдо гориво</span></li>
-							<li><strong>Водоснабденост:</strong> <span>Не</span></li>
-							<li><strong>Електричество:</strong> <span>Не</span></li>
-							<li><strong>Кухня:</strong> <span>Не</span></li>
-							<li><strong>Уебсайт:</strong> <span>-</span></li>
-							<li><strong>Адрес:</strong> <span>-</span></li>
-							<li><strong>Телефон:</strong> <span>+359 885 232 325 <br> +359 887 841 220</span></li>
-							<li><strong>Достъпност:</strong> <span><em class="rating" data-readonly="true" data-score="4" data-star-off="star-on.png" data-star-off="star-off.png" data-hints='["Елементарно", "Лесно", "Средно", "Трудно", "Про"]'></em></span></li>
+							<li>
+								<strong>Категория:</strong>
+								<span>Заслон</span>
+							</li>
+							<li>
+								<strong>Област:</strong>
+								<span><a href="06-blog-post.html" itemprop="addressRegion">Кюстендил</a></span>
+							</li>
+							<li>
+								<strong>Планина:</strong>
+								<span><a href="06-blog-post.html">Рила</a></span>
+							</li>
+							<li>
+								<strong>Координати:</strong>
+								<span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates"><em itemprop="latitude">42.10354,</em> <em itemprop="longitude">23.27121</em></span>
+							</li>
+							<li>
+								<strong>Надм. височина:</strong>
+								<span>2145м.</span>
+							</li>
+							<li>
+								<strong>Брой легла:</strong>
+								<span>20</span>
+							</li>
+							<li>
+								<strong>Отопление:</strong>
+								<span>Твърдо гориво</span>
+							</li>
+							<li>
+								<strong>Водоснабденост:</strong>
+								<span>Не</span>
+							</li>
+							<li>
+								<strong>Електричество:</strong>
+								<span>Не</span>
+							</li>
+							<li>
+								<strong>Кухня:</strong>
+								<span>Не</span>
+							</li>
+							<li>
+								<strong>Телефон:</strong>
+								<span itemprop="telephone">+359 885 232 325 <br> +359 887 841 220</span>
+							</li>
+							<li>
+								<strong>Достъпност:</strong>
+								<span><em class="rating" data-readonly="true" data-score="4" data-star-on="star-on.png" data-star-off="star-off.png" data-hints='["Елементарно", "Лесно", "Средно", "Трудно", "Про"]'></em></span></li>
 						</ul>
 					</div>
 				</div><!-- /details -->
@@ -142,7 +175,7 @@
 						</header>
 						
 						<section class="links-body">
-							<a class="link" href="04-ho	tel-single.html">
+							<a class="link" href="04-hotel-single.html">
 								<span class="link-image"><span><img src="css/images/small1.jpg" alt=""></span></span>
 								<span class="link-text">
 									<strong class="link-title">Име на хотела</strong>
@@ -183,7 +216,7 @@
 						</header>
 						
 						<section class="links-body">
-							<a class="link" href="resta	urant.html">
+							<a class="link" href="04-restaurant-single.html">
 								<span class="link-image"><span><img src="css/images/small1.jpg" alt=""></span></span>
 								<span class="link-text">
 									<strong class="link-title">Име на заведението</strong>
