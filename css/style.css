@@ -440,7 +440,7 @@ a,
 
 .post + .post { margin-top: 40px; background: url(images/rope-grey.png) repeat-x 0 0; padding-top: 48px; }
 
-.post { line-height: 1.45; }
+.post { line-height: 1.45; font-size: 16px; }
 
 .post h1,
 .post h2,
@@ -1415,6 +1415,8 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
     .points h3 { margin-bottom: 10px; }
     .content .points ul { margin-left: 0; }
     .content .points li { width: auto; margin: 0 0 15px; }
+
+    .post { font-size: 14px; }
 
     .adventure .cta,
     .adventure .points,
