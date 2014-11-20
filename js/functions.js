@@ -42,6 +42,16 @@
 
 		winWidth = $win.width();
 
+		//nav functions
+		$('.nav-mobile').html($header.find('.nav').html());
+
+		$('#nav-btn').on('click', function(e){
+			$header.toggleClass('open');
+			$('.nav-mobile').toggleClass('open');
+
+			e.preventDefault();
+		});
+
 		//blink fields
 		if ( $formField.length ) {
 			$formField.each(function(){
@@ -77,7 +87,7 @@
 				subtotal  = price*quantity;
 
 			if ( price === parseInt(price) && price ) {
-				$subtotal.text( subtotal + 'lv' );
+				$subtotal.text( subtotal + 'лв' );
 			} else {
 				$subtotal.text('');
 			}
@@ -102,15 +112,6 @@
 			}
 		});
 
-		/*$header.find('.searchform').on('focusout', 'input[type="text"]', function(e){
-			var $this = $(this);
-
-			if ( $this.val() != '' ) {
-				$this.val('');
-			}
-			$this.parents('.searchform').removeClass('open');
-		});*/
-
 		//file upload field
 		$('.gfield-fileupload').find('input').on('change', function(){
 			var $this = $(this);
@@ -119,7 +120,7 @@
 		});
 
 		//add new field
-		$gfieldNew.append('<a class="button" href="#">Add field</a>');
+		$gfieldNew.append('<a class="button" href="#">Добави поле</a>');
 
 		$gfieldNew.on('click', '.button', function(e){
 			var $this = $(this),
@@ -132,12 +133,6 @@
 		});
 
 		//header buttons
-		$('#nav-btn').on('click', function(e){
-			$header.toggleClass('open');
-
-			e.preventDefault();
-		});
-
 		$buttonProfile.children('a').on('click', function(e){
 			$(this).parent().toggleClass('open').siblings().removeClass('open');
 
@@ -291,11 +286,9 @@
 		if (navigator.geolocation && $buttonCoordinates.length) {
 			navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
 		} else if (navigator.geolocation && $('#button-navigate').length) {
-			alert( 'is locationg' );
 			navigator.geolocation.getCurrentPosition(geoNavigate, geoError);
 		} else { 
-			alert( 'is not locating ')
-			$('.my-coordinates').html('<p>Your browser does not support this function');
+			$('.my-coordinates').html('<p>Вашият браузър не поддържа тази функция</p>');
 		}
 	}
 
@@ -321,27 +314,23 @@
 	}
 
 	function geoError(){
-		alert( 'Please turn your GPS on' );
+		alert( 'Моля, проверете дали вашият GPS е включен, презаредете страницата и опитайте отново.' );
 
 		switch(error.code) {
 			case error.PERMISSION_DENIED:
-				alert( 'Denied ')
-				$('.my-coordinates').html('<p>User denied the request for Geolocation.</p>');
+				$('.my-coordinates').html('<p>Потребителят отказа заявката за засичане на координати.</p>');
 				break;
 			case error.POSITION_UNAVAILABLE:
-				alert( 'unav ')
-				$('.my-coordinates').html('<p>Location information is unavailable.</p>');
+				$('.my-coordinates').html('<p>Информация за локацията не е налична.</p>');
 				break;
 			case error.TIMEOUT:
-				alert( 'timeout ')
-				$('.my-coordinates').html('<p>The request to get user location timed out.</p>');
+				$('.my-coordinates').html('<p>Няма връзка или връзката с интернет е много слаба, за да се изпълни заявката. Моля опитайте отново.</p>');
 				break;
 			case error.UNKNOWN_ERROR:
-				alert( 'error ')
-				$('.my-coordinates').html('<p>An unknown error occurred.</p>');
+				$('.my-coordinates').html('<p>Неочаквана греша. Моля опитайте отново.</p>');
 				break;
 			default:
-				alert( 'error' );
+				alert( 'Грешка. Моля опитайте отново.' );
 		}
 	}
 
@@ -379,7 +368,7 @@
 				}, 100);
 			},
 			error: function(){
-				alert('Page can not be loaded !');
+				alert('Съдържанието не може да бъде заредено!');
 			}
 		});
 	}
@@ -512,7 +501,7 @@
 					//create polyline
 						polylines = new google.maps.Polyline({
 						path: newPath[trksegCount],
-						strokeColor: '#FF0000',
+						strokeColor: '#ff0000',
 						strokeWeight: 3
 					});
 

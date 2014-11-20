@@ -268,12 +268,14 @@ a,
 .nav { float: left; font-weight: 600; }
 .nav ul { list-style: none outside none; }
 .nav li { float: left; position: relative; }
-.nav li a { display: block; padding: 10px; }
+.nav li a { display: block; padding: 10px; color: #fff; }
 .nav li:hover > a,
 .nav .current-menu-item > a,
 .nav .current-menu-parent > a { background-color: #827b00; box-shadow: inset 0 0 15px rgba(0, 0, 0, .3); text-decoration: none; }
 .nav ul ul { background-color: #111; position: absolute; top: 100%; left: 0; width: 200px; line-height: 1.2; }
 .nav ul ul li { float: none; border-bottom: 1px solid #827b00; }
+
+.nav-mobile { display: none; }
 
 /* language */
 .language { float: right; position: relative; margin: 11px 15px 0 0; font-size: 13px; }
@@ -728,7 +730,7 @@ a.entry-image:hover { opacity: .7;  filter: alpha(opacity=70); }
 .gfield input[type="file"] { position: absolute; bottom: 0; right: 0; width: 200%; height: 200%; opacity: 0; cursor: pointer; z-index: 2; }
 
 .ginput_container + .ginput_container { margin-top: 10px; }
-.gfield-textarea .button { display: inline-block; background-color: #827b00; box-shadow: inset 0 0 15px rgba(0, 0, 0, .3); color: #fff; font-weight: 600; margin-top: 10px; padding: 10px 20px; cursor: pointer; }
+.gfield-new-button .button { display: inline-block; background-color: #827b00; color: #fff; font-weight: 600; margin-top: 10px; cursor: pointer; }
 
 .lt-ie9 .field,
 .lt-ie9 .gfield input,
@@ -979,6 +981,11 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
 .note { background-color: #827b00; color: #fff; position: relative; min-height: 35px; padding: 7px 10px 7px 50px; margin-bottom: 20px; }
 .note .icon { font-size: 30px; position: absolute; top: 50%; left: 10px; margin-top: -19px; }
 
+.list-item .icons { float: right; }
+
+.icons { list-style: none outside none; }
+.icons li { display: inline-block; }
+
 /* ==========================================================================================================
     #Routes Page
 =========================================================================================================== */
@@ -1049,9 +1056,17 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
 }
 
 .form-half { width: 50%; }
-.form-regular .gfield { margin-bottom: 20px; }
+.form-regular .gform_fields:before,
+.form-regular .gform_fields:after { content: " "; display: table; }
+.form-regular .gform_fields:after { clear: both; }
+.form-regular .gform_fields { margin-left: -5%; }
+.form-regular .gfield { float: left; width: 95%; margin: 0 0 20px 5%; }
 .form-regular .gfield_label { display: inline-block; position: static; margin: 0 0 5px 1px; }
 .form-regular .gfield_label.hidden { display: inline-block; }
+
+.signup-route .button { display: none; }
+.logged-in .signup-route .button { display: inline-block; }
+.logged-in .signup-route .note { display: none; }
 
 /* ==========================================================================================================
     #Visited Page
@@ -1194,8 +1209,6 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
     .entry a:hover { text-decoration: underline; }
 
     /* header */
-    .header { position: fixed; top: 0; left: 0; right: 0; }
-
     .header .searchform { width: auto; }
     .header .searchsubmit { display: block; position: static; }
     .header .searchform input[type="text"] { position: absolute; top: 0; right: 100%; width: 0; padding: 0; border: 0;
@@ -1209,12 +1222,12 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
 
     .navbar { background: transparent; position: static; float: right; }
 
-    .header.open .nav { box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+    .nav-mobile.open { box-shadow: 0 0 50px rgba(0, 0, 0, 1);
         -webkit-transform: translate(0, 0);
                 transform: translate(0, 0);
     }
 
-    .nav { background-color: #111; float: none; position: fixed; top: 0; bottom: 0; left: 0; width: 250px; z-index: 10; overflow: auto;
+    .nav { display: block; background-color: #111; float: none; position: absolute; top: 0; bottom: 0; left: 0; width: 250px; z-index: 10; overflow: auto;
         -webkit-transition: .3s;
                 transition: .3s;
         -webkit-transform: translate(-250px, 0);
@@ -1233,6 +1246,8 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
 
     .nav-btn { display: block; }
 
+    .nav-mobile { display: block; }
+
     .language { margin: 3px 0 0; }
     .language ul { right: -8px; }
     .language ul:before { border-bottom-color: #111; }
@@ -1241,7 +1256,7 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
     .utility-nav li:before { content: '|'; padding-right: 5px; }
     
     /* main */
-    .container { padding-top: 57px;
+    .container {
         -webkit-box-sizing: border-box;
                 box-sizing: border-box;
     }
@@ -1321,8 +1336,6 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
     .header .searchform input[type="text"] { height: 28px; }
     .header .searchsubmit { width: 28px; height: 28px; }
 
-    .container { padding-top: 85px; }
-
     .main { padding: 58px 0 250px; }
     .main:before { background-color: #827b00; top: 0; }
 
@@ -1373,6 +1386,8 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
     .list-item-meta li + li { margin-left: 0; }
     .list-item-meta li + li:before { display: none; }
     .list-item-meta .icon { display: inline-block; width: 17px; }
+
+    .list-item .icons { float: none; }
 
     .secondary-nav li { float: none; margin: 0; }
     .secondary-nav li + li { border-top: 1px solid #fff; }
