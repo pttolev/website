@@ -1096,6 +1096,15 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
 .calendar { position: relative; margin-bottom: 15px; }
 .calendar-small .fc-toolbar { display: none; }
 
+/* ==========================================================================================================
+    #Plans
+=========================================================================================================== */
+
+.organized-plans { background: url(images/rope-grey.png) repeat-x 0 bottom; padding-bottom: 30px; margin-bottom: 20px; }
+.organized-plans .articles { margin-bottom: 30px; }
+.organized-plans .map { margin-bottom: 30px; }
+.organized-plans-footer h6 { margin-bottom: 20px; }
+
 @media (max-width: 1700px) {
     .slider-large,
     .slider-large .slide { height: 495px; }
