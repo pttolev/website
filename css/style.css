@@ -197,6 +197,12 @@ a,
 
 .utility-nav .button-profile { padding: 0; }
 
+.socials-small { float: left; font-size: 20px; margin-top: 6px; }
+.socials-small ul { list-style: none outside none; margin-left: 15px; }
+.socials-small li { float: left; }
+.socials-small li + li { margin-left: 10px; }
+.socials-small a:hover { text-decoration: none; color: #222; }
+
 .user-state { float: left; position: relative; z-index: 1; margin-left: 15px; }
 .user-state ul { list-style: none outside none; }
 .user-state li { float: left; position: relative; }
@@ -1225,6 +1231,8 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
                 transition: .4s;
     }
     .header .searchform.open input[type="text"] { width: 200px; padding: 0 10px; }
+
+    .socials-small { display: none; }
 
     .button,
     #submit { font-weight: 600; }

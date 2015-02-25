@@ -1,0 +1,2 @@
+forecast.html
+achievements.html

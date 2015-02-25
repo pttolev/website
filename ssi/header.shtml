@@ -48,6 +48,15 @@
 						<li><a href="forecast.html"><small class="icon icon-sun-1"></small><span>Прогноза</span></a></li>
 					</ul>
 				</nav>
+
+				<nav class="socials-small">
+					<ul class="clearfix">
+						<li><a class="icon icon-facebook-squared" href="#"></a></li>
+						<li><a class="icon icon-twitter-squared" href="#"></a></li>
+						<li><a class="icon icon-gplus-squared" href="#"></a></li>
+						<li><a class="icon icon-instagram" href="#"></a></li>
+					</ul>
+				</nav>
 				
 				<form method="get" class="searchform" action="#"> 
 					<div>
@@ -66,7 +75,9 @@
 									<li><a href="12-profile.html">Лични данни</a></li>
 									<li><a href="14-visited.html">Посетени</a></li>
 									<li><a href="16-plans.html">Планове</a></li>
+									<li><a href="14-favourites.html">Любими</a></li>
 									<li><a href="02-organized.html">Организирани</a></li>
+									<li><a href="#">Нов Пътепис</a></li>
 								</ul>
 							</div>
 						</li>
@@ -93,10 +104,10 @@
 							<a href="02-sightseeings.html">Забележителности</a>
 
 							<ul>
-								<li><a href="02-monasteries.html">Музеи</a></li>
-								<li><a href="02-monasteries.html">Исторически</a></li>
-								<li><a href="02-monasteries.html">Манастири</a></li>
 								<li><a href="02-monasteries.html">Природни</a></li>
+								<li><a href="02-monasteries.html">Исторически</a></li>
+								<li><a href="02-monasteries.html">Музеи</a></li>
+								<li><a href="02-monasteries.html">Манастири</a></li>
 								<li><a href="11-top-sightseeings.html">Топ Забележителности</a></li>
 							</ul>
 						</li>
@@ -114,17 +125,20 @@
 
 						<li><a href="15-events.html">Събития</a></li>
 
+						<li><a href="06-blog.html">Пътеписи</a></li>
+
 						<li class="has-dropdown">
 							<a href="02-stuff.html">Разни</a>
 
 							<ul>
+								<li><a href="02-useful-information.html">Полезна информация</a></li>
 								<li><a href="02-restaurants.html">Места за хапване</a></li>
 								<li><a href="09-gallery.html">Галерии</a></li>
 								<li><a href="09-videos.html">Видеоклипове</a></li>
+								<li><a href="02-stuff.html">Гъби</a></li>
+								<li><a href="02-stuff.html">Билки</a></li>
 							</ul>
 						</li>
-
-						<li><a href="02-useful-information.html">Полезна информация</a></li>
 						
 						<li><a href="13-organize.html">Организирай преход</a></li>
 					</ul>
