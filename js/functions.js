@@ -245,8 +245,6 @@
 		});
 
 		$('#button-navigate').on('click', function(e){
-			/*alert( $(this).data('alert') );*/
-
 			getGeolocation();
 
 			e.preventDefault();
