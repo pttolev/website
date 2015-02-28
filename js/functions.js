@@ -268,8 +268,6 @@
 
 		$('select').selecter();
 
-		mapSize();
-
 		backgroundResize();
 	});
 
@@ -277,7 +275,6 @@
 	$win.on('resize', function(){
 		winWidth = $win.width();
 		backgroundResize();
-		mapSize();
 	});
 	
 	function getGeolocation(){
@@ -403,16 +400,6 @@
 			'top': (containerH - image.height())/2,
 			'left': (containerW - image.width())/2
 		});
-	}
-	
-	function mapSize(){
-		if ( $details.length && $map.length ) {
-			$map.height( winWidth > 767 ? $details.height() : 'auto' );
-			
-			if ( $('.lt-ie9').length ) {
-				$map.width($map.parents('.details').width() - $map.siblings('.list-table').outerWidth(true));
-			}
-		}
 	}
 
 	function initialize(){

@@ -62,14 +62,14 @@ iframe { border: 0; }
 
 .button,
 #submit { display: inline-block; border: 0; border-radius: 3px; color: #fff; font-weight: bold; padding: 7px 15px; cursor: pointer; font-size: 14px; line-height: 1.3;
-    background: #9a9432; /* Old browsers */
+    background: #9a9432;
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzlhOTQzMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2YTY0MDIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: -moz-linear-gradient(top,  #9a9432 0%, #6a6402 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9a9432), color-stop(100%,#6a6402)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #9a9432 0%,#6a6402 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #9a9432 0%,#6a6402 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #9a9432 0%,#6a6402 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #9a9432 0%,#6a6402 100%); /* W3C */
+    background: -moz-linear-gradient(top,  #9a9432 0%, #6a6402 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9a9432), color-stop(100%,#6a6402));
+    background: -webkit-linear-gradient(top,  #9a9432 0%,#6a6402 100%);
+    background: -o-linear-gradient(top,  #9a9432 0%,#6a6402 100%);
+    background: -ms-linear-gradient(top,  #9a9432 0%,#6a6402 100%);
+    background: linear-gradient(to bottom,  #9a9432 0%,#6a6402 100%);
 }
 .button-large { padding: 10px 40px; font-size: 20px; }
 .lt-ie9 .button,
@@ -79,7 +79,8 @@ iframe { border: 0; }
 
 .button-holder { text-align: center; }
 
-.button .icon { font-size: 14px; margin-right: 4px; }
+.button .icon { color: #fff; font-size: 14px; margin-right: 4px; }
+.button .icon:hover { color: #fff; }
 
 a,
 .flag,
@@ -169,6 +170,9 @@ a,
             transform: translate(0, 0);
 }
 
+.icon-print { color: #827b00; }
+.icon-print:hover { text-decoration: none; color: #222; }
+
 /* =====================================================
     #Header
 ====================================================== */
@@ -180,7 +184,9 @@ a,
 .header .searchform { float: left; width: 250px; margin-left: 15px; box-shadow: 0 0 5px rgba(0, 0, 0, .3); margin-top: 1px; }
 
 .logo { float: left; width: 127px; margin-top: 4px; }
-.logo a { display: block; background: url(images/logo.png) no-repeat 0 0; background-size: cover; height: 26px; text-indent: -4000px; white-space: nowrap; overflow: hidden; }
+.logo a { display: block; background: url(images/2logo.png) no-repeat 0 0; background-size: cover; height: 26px; text-indent: -4000px; white-space: nowrap; overflow: hidden; }
+
+.lt-ie9 .logo a { background-image: url(images/logo.png); }
 
 .utilities { float: right; }
 
@@ -337,11 +343,13 @@ a,
 
 .main { position: relative; z-index: 2; padding: 50px 0 300px; }
 .main .shell { position: relative; }
-.main:before { content: ''; background: url(images/mountains.png) repeat-x 0 0; background-size: auto 100%; height: 38px; position: absolute; top: -38px; left: 0; right: 0; }
+.main:before { content: ''; background: url(images/2mountains.png) repeat-x 0 0; background-size: auto 100%; height: 38px; position: absolute; top: -38px; left: 0; right: 0; }
+.lt-ie9 .main:before { background-image: url(images/mountains.png); }
 
 /* features */
 .features { background: url(images/rope-grey.png) repeat-x 0 bottom; padding-bottom: 58px; margin-bottom: 45px; }
-.feature { float: left; background: url(images/mountains-grey.png) repeat-x 0 bottom; background-size: auto 38px; border: 1px solid #d6d6d6; border-radius: 5px; box-shadow: 0 0 3px rgba(0, 0, 0, .5); width: 32%; height: 155px; color: #222; padding: 10px 25px; }
+.feature { float: left; background: url(images/2mountains-grey.png) repeat-x 0 bottom; background-size: auto 38px; border: 1px solid #d6d6d6; border-radius: 5px; box-shadow: 0 0 3px rgba(0, 0, 0, .5); width: 32%; height: 155px; color: #222; padding: 10px 25px; }
+.lt-ie9 .feature { background-image: url(images/mountains-grey.png); }
 .feature:hover { background-color: #827b00; border-color: #827b00; text-decoration: none; }
 .feature:hover .icon { color: #222; }
 .feature + .feature { margin-left: 2%; }
@@ -365,6 +373,12 @@ a,
 .article-image img { border-radius: 7px; width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
 .article-image .icon { position: absolute; bottom: 10px; right: 15px; color: #fff; font-size: 20px; text-shadow: 0 0 10px rgba(0, 0, 0, 1); }
 
+.articles-head h2,
+.articles-head h3 { position: relative; }
+.articles-head h2 .icon,
+.articles-head h3 .icon { position: absolute; top: 0; right: 0; }
+.articles-head .has-icon { padding-right: 40px; }
+
 .section { background: url(images/rope-grey.png) repeat-x 0 bottom; padding-bottom: 8px; margin-bottom: 45px; position: relative; }
 .section:last-child { background: transparent; padding-bottom: 0; }
 
@@ -376,6 +390,10 @@ a,
 .links .end-message { text-align: left; margin-top: 20px; }
 
 /* links */
+.links-group:before,
+.links-group:after { content: " "; display: table; }
+.links-group:after { clear: both; }
+
 .links { width: 48%; }
 .links h3 { margin-bottom: 25px; }
 .links .more { margin-top: 15px; }
@@ -405,9 +423,10 @@ a,
 ====================================================== */
 
 .footer { background-color: #827b00; color: #fff; text-align: center; padding-top: 20px; position: absolute; bottom: 0; left: 0; right: 0; z-index: 3; }
-.footer:before { content: ''; background: url(images/mountains-green.png) repeat-x 0 0; background-size: auto 100%; height: 38px; position: absolute; top: -38px; left: 0; right: 0; }
+.footer:before { content: ''; background: url(images/2mountains-green.png) repeat-x 0 0; background-size: auto 100%; height: 38px; position: absolute; top: -38px; left: 0; right: 0; }
 .footer a { color: #fff; }
 .footer ul { list-style: none outside none; }
+.lt-ie9 .footer:before { background-image: url(images/mountains-green.png); }
 
 .footer-nav { margin-bottom: 10px; }
 .footer-nav li { display: inline; margin: 0 10px; }
@@ -440,9 +459,11 @@ a,
 .content { width: 74.5%; }
 
 .title { background: url(images/rope-grey.png) repeat-x 0 bottom; font-size: 21px; padding-bottom: 10px; margin-bottom: 20px; line-height: 1.45; }
-.title h2 { line-height: 1; font-weight: bold; }
+.title h2 { line-height: 1; font-weight: bold; position: relative; }
+.title h2 .icon { position: absolute; top: 0; right: 0; }
 .title h2:last-child { margin-bottom: 12px; }
 .title p { padding: 5px 0 10px; }
+.title .has-icon { padding-right: 40px; }
 
 .post + .post { margin-top: 40px; background: url(images/rope-grey.png) repeat-x 0 0; padding-top: 48px; }
 
@@ -481,6 +502,8 @@ a,
 .post .flex-control-nav,
 .post .entry-likes { padding: 0; }
 
+.post .block { margin: 10px 0 10px 20px; }
+
 .entry { overflow: hidden; }
 .entry a { text-decoration: underline; }
 .entry a:hover { text-decoration: none; }
@@ -498,10 +521,25 @@ a.entry-image:hover { opacity: .7;  filter: alpha(opacity=70); }
 
 .entry-title { font-weight: normal; }
 
+.block { float: right; border-radius: 5px; color: #fff; font-size: 13px; font-weight: 600; width: 300px; padding: 10px 15px;
+    background: #9a9432;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzlhOTQzMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2YTY0MDIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #9a9432 0%, #6a6402 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9a9432), color-stop(100%,#6a6402));
+    background: -webkit-linear-gradient(top,  #9a9432 0%,#6a6402 100%);
+    background: -o-linear-gradient(top,  #9a9432 0%,#6a6402 100%);
+    background: -ms-linear-gradient(top,  #9a9432 0%,#6a6402 100%);
+    background: linear-gradient(to bottom,  #9a9432 0%,#6a6402 100%);
+}
+.block p:last-child { padding-bottom: 0; }
+
 .video { position: relative; height: 0; padding-bottom: 39.5%; }
 .video iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
 
-.share { margin-bottom: 10px; }
+.share { margin-bottom: 10px; overflow: hidden; }
+.share .icon { font-size: 20px; line-height: 1; vertical-align: baseline; margin-left: 3px; }
+.share .icon:hover { opacity: 1; }
+.share .addthis_sharing_toolbox { float: left; }
 .share a:hover { opacity: .7; filter: alpha(opacity=70); }
 
 .wp-pagenavi-container { background: url(images/rope-grey.png) repeat-x 0 0; padding-top: 40px; margin-top: 50px; text-align: center; }
@@ -899,8 +937,8 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
 .infowindow-coordinates { color: #827b00; padding-bottom: 10px; }
 .infowindow-coordinates:last-child { padding-bottom: 0; }
 
-.details { margin-bottom: 20px; }
-.details .map { position: relative; float: right; width: calc(100% - 320px); width: -webkit-calc(100% - 320px); }
+.details { margin-bottom: 20px; position: relative; }
+.details .map { position: absolute; top: 0; right: 0; height: 100%; width: calc(100% - 320px); width: -webkit-calc(100% - 320px); }
 .details .map-canvas { width: 100%; height: 100%; position: absolute; top: 0; left: 0; margin-bottom: 0; }
 .lt-ie9 .details .map { width: 820px; }
 
@@ -917,6 +955,7 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
 .list-table small { display: block; font-size: 10px; }
 .list-table em { display: inline-block; font-style: normal; }
 .list-table a { -ms-word-break: break-word; word-break: break-word; }
+.list-table .icon-print { font-size: 20px; line-height: 1; vertical-align: baseline; }
 .lt-ie9 .details .list-table a { display: inline-block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; max-width: 150px; }
 
 .rating { display: block; font-style: normal; }
@@ -1004,7 +1043,9 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
 .title + .secondary-nav { margin-top: -20px; }
 
 .filter { background: url(images/rope-grey.png) repeat-x 0 bottom; padding-bottom: 20px; margin-bottom: 10px; }
-.filter h3 { margin-bottom: 20px; }
+.filter h3 { margin-bottom: 20px; position: relative; }
+.filter h3 .icon { position: absolute; top: 0; right: 2px; }
+.filter .has-icon { padding-right: 30px; }
 .filter-items { margin-left: -2%; }
 .filter-item { float: left; width: 23%; margin-left: 2%; margin-bottom: 20px;
     -webkit-box-sizing: border-box;
@@ -1174,6 +1215,7 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
 
     .link:hover,
     .article:hover { color: #222; }
+    .icon-print:hover { color: #827b00; }
 
     .gallery-item a:hover,
     .link:hover .link-image span,
@@ -1419,7 +1461,7 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
     
     .details { margin-bottom: 10px; }
     .details-mobile-hidden { display: none; }
-    .details .map { float: none; width: auto; margin-bottom: 2px; }
+    .details .map { float: none; width: auto; margin-bottom: 2px; position: relative; }
     .details .map-canvas { position: static; height: 200px; }
 
     .map-canvas { height: 200px; }
@@ -1449,6 +1491,8 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
     .content .points li { width: auto; margin: 0 0 15px; }
 
     .post { font-size: 14px; }
+    .post .block { margin: 0 0 20px; }
+    .block { float: none; width: auto; }
 
     .adventure .cta,
     .adventure .points,
@@ -1510,4 +1554,78 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
     
     .list-item .button { margin-bottom: 5px; }
     .list-item .button:last-child { margin-bottom: 0; }
+}
+
+@media print {
+    body { margin: 20px 0; }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    .post h1,
+    .post h2,
+    .post h3,
+    .post h4,
+    .post h5,
+    .post h6,
+    .widget_price,
+    .list-item-level,
+    .list-item-text h6 .icon { color: #222; }
+
+    .cta,
+    .note,
+    .share,
+    .header,
+    .footer,
+    .slider,
+    .filter,
+    .button,
+    .sidebar,
+    .title p,
+    .forecast,
+    .articles,
+    .comments,
+    .icon-print,
+    .breadcrumbs,
+    .entry-image,
+    .secondary-nav,
+    .events button,
+    .list-item-image,
+    .graph-container,
+    .organized-plans,
+    .wp-pagenavi-container,
+    .links-group { display: none; }
+
+
+    .content { width: 100%; }
+    .main-booking .sidebar { display: block; }
+    .widget_booking { display: none; }
+    .widget_buttons .button { display: block; color: #222; }
+
+    .cta + .post,
+    .calendar-container + .section { page-break-before: always; }
+
+    .main { padding: 20px 0; }
+
+    .fc-event { background: transparent; border-color: #222; color: #222; }
+
+    .details .list-table { width: auto; padding-right: 0; min-height: 1px; margin-bottom: 25px; }
+    .details .map { position: relative; height: 400px; width: 100%; margin-bottom: 20px; }
+    .map-canvas { position: static; height: 390px !important; }
+    .list-table small { display: inline; }
+
+    .block { float: none; width: auto; border-bottom: 1px solid #000; border-radius: 0; padding: 0 0 20px; }
+    .block:before { content: 'Полезна информация'; display: block; font-size: 18px; margin-bottom: 10px; color: #000; }
+    .post .block { margin: 0 0 20px; }
+
+    .rating small { height: auto; }
+    .rating .star-on-png { text-indent: 0; line-height: 1; }
+    .rating .star-on-png:before { display: inline-block; content: '\e808'; font-family: 'fontello', sans-serif; font-size: 16px; }
+
+    .points li { float: none; display: block; width: 100%; padding-left: 0; }
+    .points .icon { display: none; }
 }
