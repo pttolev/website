@@ -14,7 +14,9 @@
 		$graphNumber,
 		$formField,
 		$buttonCoordinates,
+		$buttonMarkers,
 		$gfieldNew,
+		waypoints,
 		winWidth,
 		isMobile,
 		myLat,
@@ -38,6 +40,7 @@
 		$graphMeter        = $('.graph-meter');
 		$formField         = $('.gfield, .form-row');
 		$buttonCoordinates = $('#button-coordinates');
+		$buttonMarkers     = $('#button-markers');
 		$gfieldNew         = $('.gfield-new-button');
 
 		winWidth = $win.width();
@@ -250,6 +253,24 @@
 			e.preventDefault();
 		});
 
+		$buttonMarkers.on('click', function(e){
+			var $this      = $(this),
+				textHidden = $this.data('hidden'),
+				textShown  = $this.data('shown');
+
+			if ( $this.hasClass('markers-shown') ) {
+				$this.text(textHidden);
+				setAllMap(null)
+			} else {
+				$this.text(textShown);
+				setAllMap(map);
+			}
+
+			$this.toggleClass('markers-shown');
+
+			e.preventDefault();
+		});
+
 		if ( $buttonCoordinates.length ) {
 			getGeolocation();
 		}
@@ -432,6 +453,7 @@
 			success: function( data ){
 				var $trkseg          = $('trkseg', data),
 					$trkpt           = $('trkpt', data),
+					$wpt             = $('wpt', data),
 					trkpts           = $trkpt.length,
 					trksegCount      = 0,
 					//map options variables
@@ -442,7 +464,7 @@
 					numbersCount     = $graphNumber.length,
 					pointBrakeHeight = [],
 					//graph lines variables
-					trakpsStep       = trkpts/$graph.data('lines'),
+					trakpsStep       = trkpts/$graph.data('lines') >= 1 ? trkpts/$graph.data('lines') : 1,
 					trakpsLineCount  = trakpsStep,
 					lineValues       = [],
 					i                = 0,
@@ -485,9 +507,9 @@
 
 					//create polyline
 						polylines = new google.maps.Polyline({
-						path: newPath[trksegCount],
-						strokeColor: '#ff0000',
-						strokeWeight: 3
+						path         : newPath[trksegCount],
+						strokeColor  : '#ff0000',
+						strokeWeight : 3
 					});
 
 					polylines.setMap(map);
@@ -495,6 +517,46 @@
 					trksegCount++;
 				});
 
+				//show waypoints
+				var markers     = [],
+					infoWindows = [],
+					current     = 0,
+					i           = 0;
+
+				if ( $wpt.length ) {
+					$buttonMarkers.addClass('visible');
+				}
+
+				$wpt.each(function(){
+					var $this = $(this),
+						lat      = $this.attr('lat'),
+						lng      = $this.attr('lon'),
+						text     = $this.find('desc').text(),
+						title    = $this.find('name').text(),
+						point    = new google.maps.LatLng(lat, lng);
+
+					markers[i] = new google.maps.Marker({
+						map      : map,
+						position : point,
+						icon     : 'css/images/marker-small.png'
+					});
+
+					markers[i].setMap(null);
+			
+					infoWindows[i] = new google.maps.InfoWindow({
+						content: '<div class="infowindow"><h6>' + title + '</h6> <p>' + text + '</p></div>'
+					});
+
+					google.maps.event.addListener(markers[i], 'click', function() {
+						infoWindows[current].close();
+						current = markers.indexOf(this);
+						infoWindows[current].open(map, this);
+					});
+
+					i++
+				});
+
+				waypoints = markers;
 
 				//graph numbers
 				var	pointBrake = highestPoint,
@@ -545,9 +607,9 @@
 		map.setCenter( point );
 
 		marker = new google.maps.Marker({
-			map: map,
-			icon: icon,
-			position: point
+			map      : map,
+			position : point,
+			icon     : icon
 		});
 
 		var	infoWindow = new google.maps.InfoWindow({
@@ -579,9 +641,9 @@
 				point    = new google.maps.LatLng(lat, lng);
 	
 			markers[i] = new google.maps.Marker({
-				map: map,
-				icon: icon,
-				position: point
+				map      : map,
+				position : point,
+				icon     : icon
 			});
 	
 			infoWindows[i] = new google.maps.InfoWindow({
@@ -601,5 +663,11 @@
 
 		//map fit bounds
 		map.fitBounds(bounds);
+	}
+
+	function setAllMap(map){
+		for (var i = 0; i < waypoints.length; i++) {
+			waypoints[i].setMap(map);
+		}
 	}
 }(jQuery, window, document));

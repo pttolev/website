@@ -942,6 +942,10 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
 .details .map-canvas { width: 100%; height: 100%; position: absolute; top: 0; left: 0; margin-bottom: 0; }
 .lt-ie9 .details .map { width: 820px; }
 
+.button-markers { display: none; position: absolute; bottom: 10px; right: 10px; z-index: 1; }
+.button-markers.visible { display: block; }
+.button-markers:hover { opacity: 1; color: #bbb; }
+
 .list-table { min-height: 400px; margin-bottom: 30px; }
 .list-table ul { display: table; width: 100%; list-style: none outside none; padding-left: 0; }
 .list-table li { display: table-row; }
