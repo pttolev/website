@@ -425,8 +425,7 @@
 
 	function initialize(){
 		var mapOptions = {
-			zoom: 13,
-			mapTypeId: google.maps.MapTypeId.TERRAIN
+			zoom: 13
 		}
 	
 		map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
@@ -455,7 +454,6 @@
 					$trkpt           = $('trkpt', data),
 					$wpt             = $('wpt', data),
 					trkpts           = $trkpt.length,
-					trksegCount      = 0,
 					//map options variables
 					bounds           = new google.maps.LatLngBounds(),
 					newPath          = [],
@@ -464,58 +462,72 @@
 					numbersCount     = $graphNumber.length,
 					pointBrakeHeight = [],
 					//graph lines variables
-					trakpsStep       = trkpts/$graph.data('lines') >= 1 ? trkpts/$graph.data('lines') : 1,
-					trakpsLineCount  = trakpsStep,
+					trakptsStep      = trkpts/$graph.data('lines') >= 1 ? trkpts/$graph.data('lines') : 1,
+					trakpsLineCount  = trakptsStep,
 					lineValues       = [],
 					i                = 0,
 					boundItem,
+					pointBrake,
 					lowestPoint,
-					highestPoint;
+					highestPoint,
+					pointsDiff,
+					pointDiff;
+					/*elePoints = [],
+					colors = [
+						'#eee',
+						'#ccc'
+					]*/
 
-				$trkseg.each(function(){
-					newPath[trksegCount] = [];
+				$trkpt.each(function(){
+					var $this = $(this),
+						lat   = $this.attr('lat'),
+						lng   = $this.attr('lon'),
+						ele   = parseInt($this.find('ele').text());
+						point = new google.maps.LatLng(lat, lng);
 
-					$(this).find('trkpt').each(function(){
-						var $this = $(this),
-							lat   = $this.attr('lat'),
-							lng   = $this.attr('lon'),
-							ele   = parseInt($this.find('ele').text());
-							point = new google.maps.LatLng(lat, lng);
-
-							if ( !lowestPoint ) {
-								lowestPoint = ele;
-							} else if ( lowestPoint > ele ) {
-								lowestPoint = ele
-							}
-
-							if ( !highestPoint ) {
-								highestPoint = ele;
-							} else if ( highestPoint < ele ) {
-								highestPoint = ele
-							}
-
-						if ( i == Math.floor(trakpsLineCount) && $graphNumber.length ) {
-							lineValues.push(ele);
-							trakpsLineCount += trakpsStep;
+						if ( !lowestPoint ) {
+							lowestPoint = ele;
+						} else if ( lowestPoint > ele ) {
+							lowestPoint = ele
 						}
 
-						bounds.extend(point);
-						newPath[trksegCount].push(point);
+						if ( !highestPoint ) {
+							highestPoint = ele;
+						} else if ( highestPoint < ele ) {
+							highestPoint = ele
+						}
 
-						i++;
-					});
+					if ( i == Math.floor(trakpsLineCount) && numbersCount ) {
+						lineValues.push(ele);
+						trakpsLineCount += trakptsStep;
+					}
 
-					//create polyline
-						polylines = new google.maps.Polyline({
-						path         : newPath[trksegCount],
-						strokeColor  : '#ff0000',
-						strokeWeight : 3
-					});
+					bounds.extend(point);
+					newPath.push(point);
+					/*elePoints.push(ele);*/
 
-					polylines.setMap(map);
-
-					trksegCount++;
+					i++;
 				});
+
+				pointBrake = highestPoint;
+				pointsDiff = highestPoint - lowestPoint;
+
+				/*var pathSegment = {};
+				var counter     = 0;
+				var colorsDiff = pointsDiff/(colors.length - 1);
+
+				for ( var i = 0; i < elePoints.length; i++ ) {
+					console.log( elePoints[i] );
+				}*/
+
+				//create polyline
+				polylines = new google.maps.Polyline({
+					path         : newPath,
+					strokeColor  : '#ff0000',
+					strokeWeight : 3
+				});
+
+				polylines.setMap(map);
 
 				//show waypoints
 				var markers     = [],
@@ -559,21 +571,25 @@
 				waypoints = markers;
 
 				//graph numbers
-				var	pointBrake = highestPoint,
-					pointsDiff = highestPoint - lowestPoint,
-					pointDiff  = pointsDiff/numbersCount;
+				pointDiff  = pointsDiff/(numbersCount - 1);
 
 				for ( var i = 0; i < numbersCount; i++ ) {
 					pointBrakeHeight.push(pointBrake);
 					pointBrake -= pointDiff;
 				}
 
-				if ( $graphNumber.length ) {
+				if ( numbersCount ) {
 					$graphNumber.each(function(){
 						var $this = $(this),
 							text  = Math.floor(pointBrakeHeight[$this.index()]);
 
-						$this.find('strong').text(text);
+						if ( $this.index() == 0 ) {
+							$this.find('strong').text(highestPoint);
+						} else if ( $this.index() < numbersCount - 1 ) {
+							$this.find('strong').text(text);
+						} else {
+							$this.find('strong').text(lowestPoint);
+						}
 					});
 				}
 
