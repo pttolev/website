@@ -934,6 +934,7 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
 
 .infowindow { font-family: Arial, sans-serif; padding: 10px; }
 .infowindow h6 { margin-bottom: 3px; font-size: 14px; }
+.infowindow-subtitle { font-weight: bold; margin-bottom: 10px; }
 .infowindow-coordinates { color: #827b00; padding-bottom: 10px; }
 .infowindow-coordinates:last-child { padding-bottom: 0; }
 

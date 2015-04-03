@@ -543,8 +543,9 @@
 					var $this = $(this),
 						lat      = $this.attr('lat'),
 						lng      = $this.attr('lon'),
-						text     = $this.find('desc').text(),
 						title    = $this.find('name').text(),
+						cmt      = $this.find('cmt').text(),
+						text     = $this.find('desc').text(),
 						point    = new google.maps.LatLng(lat, lng);
 
 					markers[i] = new google.maps.Marker({
@@ -556,7 +557,7 @@
 					markers[i].setMap(null);
 			
 					infoWindows[i] = new google.maps.InfoWindow({
-						content: '<div class="infowindow"><h6>' + title + '</h6> <p>' + text + '</p></div>'
+						content: '<div class="infowindow"><h6>' + title + '</h6> <p class="infowindow-subtitle">' + cmt + '</p> <p>' + text + '</p></div>'
 					});
 
 					google.maps.event.addListener(markers[i], 'click', function() {
